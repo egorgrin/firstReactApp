@@ -5,57 +5,56 @@ import './App.css';
 function App() {
     return (
         <div className="app-wrapper">
-            <header className="header">
-                <img
-                    src="https://dummyimage.com/250x60/a3a3a3/fff.png&text=Logotype"
-                    alt=""
-                />
-            </header>
+    <header className="header">
+        <div className="header__logo"><h1>Logotype</h1></div>
+    </header>
 
-            <div className="main">
-                <aside className="sidebar">
-                    <div className="sidebar__menu">
-                        <ul>
-                            <li>
-                                <a href="#">Profile</a>
-                            </li>
-                            <li>
-                                <a href="#">Messages</a>
-                            </li>
-                            <li>
-                                <a href="#">News</a>
-                            </li>
-                            <li>
-                                <a href="#">Music</a>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-
-                <section className="content">
-                    <h1>Hello world!</h1>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Alias eum delectus ratione quaerat quis! Quasi
-                        quod, vero voluptas maxime quaerat itaque odio esse modi
-                        excepturi, officiis asperiores accusantium architecto ut
-                        qui sint necessitatibus est veniam magni numquam
-                        adipisci. Tempore, molestias!
-                    </p>
-                    <h3>Bye world!</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. In ullam dolores odio eum ea enim hic, explicabo
-                        itaque eos fuga aliquam nostrum debitis unde!
-                        Exercitationem labore sequi adipisci. Iste similique
-                        molestiae ab porro facilis mollitia aliquid, nisi
-                        consequuntur nam aspernatur?
-                    </p>
-                </section>
+    <div className="main">
+        <aside className="sidebar">
+            <div className="sidebar__menu">
+                <ul>
+                    <li>
+                        <a href="#">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#">Messages</a>
+                    </li>
+                    <li>
+                        <a href="#">News</a>
+                    </li>
+                    <li>
+                        <a href="#">Music</a>
+                    </li>
+                    <li>
+                        <a href="#">Settings</a>
+                    </li>
+                </ul>
             </div>
+        </aside>
 
-            <footer className="footer">Copyright</footer>
-        </div>
+        <section className="content">
+            <div className="content__profile">
+                <div className="content__wallpaper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/NYC_Downtown_Manhattan_Skyline_seen_from_Paulus_Hook_2019-12-20_IMG_7347_FRD_%28cropped%29.jpg/1200px-NYC_Downtown_Manhattan_Skyline_seen_from_Paulus_Hook_2019-12-20_IMG_7347_FRD_%28cropped%29.jpg" alt="" />
+                </div>
+                <div className="content__person">
+                    <div className="content__logo">
+                        <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="" />
+                    </div>
+                    <div className="content__info">
+                        <h2>Name: Egor Gurinovich</h2>
+                        <p><b>Date of Birth:</b> 25/06/1992</p>
+                        <p><b>City:</b> Orenburg</p>
+                        <p><b>Education:</b> Self-thought</p>
+                        <p><b>WebSite:</b> GitHub</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    {/* <footer className="footer">Copyright</footer> */}
+</div>
     );
 }
 
