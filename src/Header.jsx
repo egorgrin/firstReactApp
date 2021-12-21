@@ -1,7 +1,9 @@
+import h from './Header.module.css';
+
 function Header() {
     return (
-        <header className="header">
-            <div className="header__logo">
+        <header className={h.header}>
+            <div className={h.logo}>
                 <h1>Logotype</h1>
             </div>
         </header>

@@ -1,0 +1,10 @@
+.header {
+    background-color: #9CC685;
+    margin-bottom: .5rem;
+}
+
+.logo {
+    display: inline-block;
+    padding: 1rem 0 1rem 2rem;
+    color: #fff;
+}

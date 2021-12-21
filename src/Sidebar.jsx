@@ -1,7 +1,9 @@
+import s from './Sidebar.module.css';
+
 function Sidebar() {
     return (
-        <aside className="sidebar">
-            <div className="sidebar__menu">
+        <aside className={s.sidebar}>
+            <div className={s.menu}>
                 <ul>
                     <li>
                         <a href="#">Profile</a>
