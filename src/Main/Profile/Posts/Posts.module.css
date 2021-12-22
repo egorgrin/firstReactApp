@@ -1,0 +1,34 @@
+.wrapper {
+    margin: 5rem 3rem 15rem 3rem;
+}
+
+.add {
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea {
+    margin-bottom: 1.5rem;
+
+}
+
+.textarea textarea {
+    width: 100%;
+    padding: 1.5rem 0 0 1rem;
+    resize: none;
+    max-height: 150px;
+    background-color: #FAFFE1;
+}
+
+.button {
+    margin-left: auto;
+}
+
+.button button {
+    padding: 1rem;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+}

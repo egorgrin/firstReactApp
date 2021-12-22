@@ -1,0 +1,53 @@
+.wrapper {
+    margin: 3rem 0 0 0;
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    height: 120px;
+}
+
+.imgContainer {
+    padding: 0 2rem 0 0;
+    height: 100%;
+}
+
+.post img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+    font-size: 18px;
+    background-color: #FAFFE1;
+    padding: 1rem  2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.actionWrapper {
+    display: flex;
+}
+
+.action {
+    display: flex;
+    margin-left: auto;
+    font-weight: bold;
+    padding-right: 1.5rem;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.actionLike {
+    color: rgb(233, 84, 84);
+    margin: 0 2rem 0 0;
+}
+
+.actionDislike {
+    color: grey;
+}
