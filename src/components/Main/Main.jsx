@@ -1,11 +1,11 @@
-import m from './Main.module.css';
+import css from './Main.module.css';
 
 import Profile from "./Profile/Prolfile";
 import Sidebar from "./Sidebar/Sidebar";
 
 function Main() {
     return (
-    <div className={m.main}>
+    <div className={css.main}>
         <Sidebar />
         <Profile />
     </div>
