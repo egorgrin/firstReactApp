@@ -2,7 +2,7 @@
     margin: 3rem 0 0 0;
 }
 
-.post {
+.body {
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
@@ -14,7 +14,7 @@
     height: 100%;
 }
 
-.post img {
+.body img {
     height: 100%;
     object-fit: cover;
 }

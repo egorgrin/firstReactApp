@@ -1,9 +1,9 @@
-import css from './Sidebar.module.css';
+import s from './Sidebar.module.css';
 
-function Sidebar() {
+const Sidebar = () => {
   return (
-    <aside className={css.sidebar}>
-      <div className={css.menu}>
+    <aside className={s.wrapper}>
+      <nav className={s.nav}>
         <ul>
           <li>
             <a href="#">Profile</a>
@@ -21,9 +21,9 @@ function Sidebar() {
             <a href="#">Settings</a>
           </li>
         </ul>
-      </div>
+      </nav>
     </aside>
   );
-}
+};
 
 export default Sidebar;

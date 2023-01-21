@@ -1,28 +1,28 @@
-.sidebar {
+.wrapper {
     display: flex;
     background-color: #9CC685;
     padding: 3rem 6rem 3rem 3rem;
 }
 
-.menu {
+.nav {
     display: flex;
     font-size: 20px;
     font-weight: bold;
 }
 
-.menu ul {
+.nav ul {
     display: flex;
     flex-direction: column;
 }
 
-.menu ul>:last-child {
+.nav ul>:last-child {
     margin-top: auto;
 }
 
-.menu ul>*:not(:last-child) {
+.nav ul>*:not(:last-child) {
     margin-bottom: .5rem;
 }
 
-.menu a {
+.nav a {
     color: #fff;
 }
