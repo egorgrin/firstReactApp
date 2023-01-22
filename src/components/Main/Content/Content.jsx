@@ -4,7 +4,7 @@ import s from './Content.module.css';
 const Content = () => {
   return (
     <section className={s.wrapper}>
-      <Profile/>
+      <Profile />
     </section>
   );
 };

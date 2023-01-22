@@ -5,8 +5,8 @@ import Sidebar from './Sidebar/Sidebar';
 const Main = () => {
   return (
     <section className={s.wrapper}>
-      <Sidebar/>
-      <Content/>
+      <Sidebar />
+      <Content />
     </section>
   );
 };

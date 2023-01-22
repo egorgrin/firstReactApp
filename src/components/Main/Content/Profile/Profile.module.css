@@ -14,19 +14,3 @@
     width: 100%;
     object-fit: cover;
 }
-
-.person {
-    display: flex;
-    align-items: center;
-    flex: auto;
-}
-
-.person img {
-    width: 150px;
-    /* height: 200px; */
-    margin: 0rem 2rem 0 2rem;
-}
-
-.info > * {
-    margin-bottom: 0.5rem;
-}

@@ -1,5 +1,6 @@
 import s from './Profile.module.css';
 import Posts from './Posts/Posts';
+import Person from '../Person/Person';
 
 const Profile = () => {
   return (
@@ -10,30 +11,8 @@ const Profile = () => {
           alt=""
         />
       </div>
-      <div className={s.person}>
-        <div>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/147/147144.png"
-            alt=""
-          />
-        </div>
-        <div className={s.info}>
-          <h2>Name: Egor Gurinovich</h2>
-          <p>
-            <b>Date of Birth:</b> 25/06/1992
-          </p>
-          <p>
-            <b>City:</b> Orenburg
-          </p>
-          <p>
-            <b>Education:</b> Self-thought
-          </p>
-          <p>
-            <b>WebSite:</b> GitHub
-          </p>
-        </div>
-      </div>
-      <Posts/>
+      <Person />
+      <Posts />
     </section>
   );
 };

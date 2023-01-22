@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex: auto;
+}
+
+.container img {
+    width: 150px;
+    margin: 0rem 2rem 0 2rem;
+}
+
+.info > * {
+    margin-bottom: 0.5rem;
+}
