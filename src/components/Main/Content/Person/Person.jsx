@@ -3,16 +3,13 @@ import s from './Person.module.css';
 const Person = (props) => {
   return (
     <div className={s.container}>
-      <div>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/147/147144.png"
-          alt=""
-        />
-      </div>
+      <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="" />
       <div className={s.info}>
-        <h2>Name: Egor Gurinovich</h2>
+        <h2>
+          Name: {props.firstName} {props.lastName}
+        </h2>
         <p>
-          <b>Date of Birth:</b> 25/06/1992
+          <b>Date of Birth:</b> {props.dob}
         </p>
         <p>
           <b>City:</b> Orenburg

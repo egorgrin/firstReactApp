@@ -1,10 +1,10 @@
 .wrapper {
-    background-color: #9CC685;
+    background-color: #17212B;
     margin-bottom: .5rem;
+    padding: 1.5rem 2rem;
 }
 
 .logo {
     display: inline-block;
-    padding: 1rem 0 1rem 2rem;
-    color: #fff;
+    color: #E4ECF2;
 }

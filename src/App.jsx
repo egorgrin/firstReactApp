@@ -1,12 +1,14 @@
 import './App.css';
-import Main from './components/Main/Main';
-import Header from './components/Header/Header';
+import Main from './components/Main/Main.jsx';
+import Header from './components/Header/Header.jsx';
 
 const App = () => {
   return (
-    <div className="app-wrapper">
-      <Header />
-      <Main />
+    <div className="appBg">
+      <div className="app-wrapper">
+        <Header />
+        <Main />
+      </div>
     </div>
   );
 };

@@ -1,17 +1,17 @@
 import s from './Profile.module.css';
-import Posts from './Posts/Posts';
-import Person from '../Person/Person';
+import Posts from './Posts/Posts.jsx';
+import Person from '../Person/Person.jsx';
 
 const Profile = () => {
   return (
     <section className={s.wrapper}>
       <div className={s.wallpaper}>
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/NYC_Downtown_Manhattan_Skyline_seen_from_Paulus_Hook_2019-12-20_IMG_7347_FRD_%28cropped%29.jpg/1200px-NYC_Downtown_Manhattan_Skyline_seen_from_Paulus_Hook_2019-12-20_IMG_7347_FRD_%28cropped%29.jpg"
+          src="https://i.pinimg.com/originals/47/fb/b6/47fbb68a37492662cd74715d7787a212.jpg"
           alt=""
         />
       </div>
-      <Person />
+      <Person firstName={`Egor`} lastName={'Gurinovich'} dob={'25/06/1992'} />
       <Posts />
     </section>
   );

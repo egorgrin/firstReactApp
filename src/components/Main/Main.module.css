@@ -1,4 +1,5 @@
 .wrapper {
     display: flex;
     flex: auto;
+    gap: .5rem;
 }

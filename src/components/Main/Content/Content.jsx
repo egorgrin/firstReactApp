@@ -1,4 +1,4 @@
-import Profile from './Profile/Profile';
+import Profile from './Profile/Profile.jsx';
 import s from './Content.module.css';
 
 const Content = () => {

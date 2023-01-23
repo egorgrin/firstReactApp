@@ -1,10 +1,13 @@
 .wrapper {
     display: flex;
-    background-color: #9CC685;
-    padding: 3rem 6rem 3rem 3rem;
+    background-color: #17212B;
+    padding: 0 0 3rem 2rem;
+    flex-basis: 15%;
+
 }
 
 .nav {
+    padding-top: 3rem;
     display: flex;
     font-size: 20px;
     font-weight: bold;
@@ -12,10 +15,19 @@
     gap: 15px;
 }
 
+.nav li {
+    transition: all .4s;
+}
+
 .nav li:last-child {
     margin-top: auto;
 }
 
+.nav li:hover, .nav li:focus, .nav li:active {
+    transform: scale(1.1) translateX(7%);
+    transition: .2s;
+}
+
 .nav a {
-    color: #fff;
+    color: #E4ECF2;
 }
