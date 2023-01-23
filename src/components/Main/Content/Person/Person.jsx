@@ -4,7 +4,10 @@ const Person = (props) => {
   return (
     <div className={s.container}>
       <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="" />
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/147/147144.png"
+          alt=""
+        />
       </div>
       <div className={s.info}>
         <h2>Name: Egor Gurinovich</h2>
