@@ -1,10 +1,54 @@
 .wrapper {
     background-color: #17212B;
     margin-bottom: .5rem;
-    padding: 1.5rem 2rem;
+    padding: .5rem 1rem;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
-.logo {
+.logo_container {
+    position: relative;
+    height: 100%;
     display: inline-block;
+}
+
+.logoBg {
+    border-radius: 50%;
+    height: 100%;
+    /*animation: App-logo-spin-left infinite 10s linear;*/
+}
+
+.logoFace {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    animation: App-logo-spin-right infinite 40s linear;
+}
+
+@keyframes App-logo-spin-right {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes App-logo-spin-left {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.title {
+    justify-content: center;
+    display: flex;
+    flex-grow: 1;
     color: #E4ECF2;
 }
