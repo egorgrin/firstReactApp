@@ -14,8 +14,8 @@ const Posts = () => {
             placeholder="Type your text here..."
           ></textarea>
         </div>
-        <div className={s.button}>
-          <button id="addPostBtn">Add Post</button>
+        <div id="addPostBtn" className={s.button}>
+          Add Post
         </div>
       </div>
       <div className={s.posts}>

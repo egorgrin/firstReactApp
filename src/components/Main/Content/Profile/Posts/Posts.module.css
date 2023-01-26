@@ -30,23 +30,19 @@
     margin-left: auto;
 }
 
-.button button {
+.button {
     border-radius: 3px;
     padding: 0.6rem 1.5rem;
-    background: #24B59E;
-    /*background: #368ED5;*/
-    /*background: #187EB6FF;*/
-    /* color: #e83939; */
     color: #E4ECF2;
-    font-weight: 600;
     font-size: 16px;
-    transition: background-color .2s ease-out;
+    background: linear-gradient(45deg, #24B59E, #A450A8 50%) left bottom;
+    background-size: 200% 100%;
+    transition: background-position .5s ease-out;
+    cursor: pointer;
 }
-.button button:hover {
-    background-color: #A450A8;
-    /*background-color: #24B59E;*/
-    /*background: #368ED5;*/
-    transition: background-color .2s ease-out;
+.button:hover {
+    background-position: right top;
+    transition: background-position .4s ease-out;
 }
 
 .posts {
