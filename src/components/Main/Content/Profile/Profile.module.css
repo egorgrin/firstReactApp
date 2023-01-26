@@ -3,12 +3,3 @@
     flex-direction: column;
     background-color: #17212B;
 }
-
-.wallpaper {
-    margin-bottom: 3rem;
-}
-.wallpaper img {
-    height: 250px;
-    width: 100%;
-    object-fit: cover;
-}

@@ -1,0 +1,28 @@
+.cover {
+    position: relative;
+    height: 250px;
+    margin-bottom: 3rem;
+}
+
+
+/*-------Static Cover:------- */
+
+/*.cover {*/
+/*    position: relative;*/
+/*    margin-bottom: 3rem;*/
+/*    height: 250px;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.cover:before {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    display: block;*/
+/*    background: url('../../../../../../public/img/cover.webp');*/
+/*    background-size: cover;*/
+/*    transform-origin: center center 0;*/
+/*}*/
