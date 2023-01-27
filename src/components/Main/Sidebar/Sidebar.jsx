@@ -4,7 +4,7 @@ const Sidebar = () => {
   return (
     <aside className={s.wrapper}>
       <nav className={s.nav}>
-        <li>
+        <li className={s.active}>
           <a href="#">Profile</a>
         </li>
         <li>

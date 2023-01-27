@@ -50,5 +50,29 @@
     justify-content: center;
     display: flex;
     flex-grow: 1;
-    color: #E4ECF2;
+}
+
+/*.title h1 {*/
+/*    background: linear-gradient(45deg, #24B59E, #2B5378, #A450A8) left bottom;*/
+/*    background-clip: text;*/
+/*    -webkit-text-fill-color: transparent;*/
+/*}*/
+.title h1 {
+    background: linear-gradient(45deg, #24B59E, #A450A8) left bottom;
+    background-size: 200% 100%;
+    animation: gradient 10s ease infinite;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
