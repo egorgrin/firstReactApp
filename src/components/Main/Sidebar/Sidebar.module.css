@@ -20,7 +20,7 @@
     transition: all .5s ease-out;
     cursor: pointer;
     padding: 12px 2rem;
-    background: linear-gradient(to right, rgba(36, 181, 158, 0.7) 50%, transparent 50%) right;
+    background: linear-gradient(to right, #2B5378 50%, transparent 50%) right;
     background-size: 200% 100%;
 }
 

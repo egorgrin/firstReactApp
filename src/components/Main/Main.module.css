@@ -1,5 +1,5 @@
 .wrapper {
     display: flex;
-    flex: auto;
+    min-height: 100vh;
     gap: .5rem;
 }
