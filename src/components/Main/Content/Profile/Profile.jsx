@@ -1,15 +1,12 @@
 import s from './Profile.module.css';
-import Cover from './Cover/Cover.jsx';
-import Person from '../Person/Person.jsx';
-import Posts from './Posts/Posts.jsx';
+
+import User from './User/User.jsx';
 
 const Profile = () => {
   return (
-    <section className={s.wrapper}>
-      <Cover />
-      <Person firstName={`Egor`} lastName={'Gurinovich'} dob={'25/06/1992'} />
-      <Posts />
-    </section>
+    <div className={s.wrapper}>
+      <User firstName={`Egor`} lastName={'Gurinovich'} dob={'25/06/1992'} />
+    </div>
   );
 };
 

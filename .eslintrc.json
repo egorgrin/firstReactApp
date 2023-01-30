@@ -9,7 +9,6 @@
     "plugin:react/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "google",
     "plugin:prettier/recommended",
     "prettier"
   ],
@@ -28,6 +27,9 @@
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "no-unused-vars": "off"
+
+
+
     // allow jsx syntax in js files (for next.js project)
     /*"react/jsx-filename-extension": [
       1,

@@ -1,3 +1,21 @@
 .wrapper {
-  flex: auto;
+    display: flex;
+    flex: auto;
 }
+
+.right_side {
+    flex-basis: 100%;
+}
+
+.left_side {
+    flex-basis: 0%;
+}
+
+/*.right_side, .left_side {*/
+/*    transition: flex-basis 1s ease-out;*/
+/*}*/
+
+/*.wrapper:hover .right_side, .wrapper:hover .left_side {*/
+/*    flex-basis: 50%;*/
+/*    transition: flex-basis 1s ease-out;*/
+/*}*/

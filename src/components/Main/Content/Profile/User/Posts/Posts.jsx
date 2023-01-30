@@ -1,9 +1,10 @@
 import s from './Posts.module.css';
+
 import Post from './Post/Post.jsx';
 
 const Posts = () => {
   return (
-    <section className={s.wrapper}>
+    <div className={s.wrapper}>
       <div className={s.add}>
         <div className={s.textarea}>
           <textarea
@@ -21,7 +22,7 @@ const Posts = () => {
       <div className={s.posts}>
         <Post text="Lorem ipsum" />
       </div>
-    </section>
+    </div>
   );
 };
 

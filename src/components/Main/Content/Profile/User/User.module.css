@@ -1,3 +1,28 @@
+.wrapper {}
+
+.profile_data {
+    display: flex;
+    align-items: center;
+    flex: auto;
+    padding: 0 2rem;
+    color: #E4ECF2;
+}
+
+.profile_data img {
+    width: 150px;
+    margin-right: 2rem;
+}
+
+.text_data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text_data > * {
+    margin-bottom: 0.5rem;
+}
+
 .cover {
     position: relative;
     height: 250px;
