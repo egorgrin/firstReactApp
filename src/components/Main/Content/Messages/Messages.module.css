@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
     flex-grow: 1;
-    gap: .5rem;
+    max-height: 100vh;
 }
 
 .dialog_list {
@@ -9,10 +9,6 @@
     background: #17212B;
 }
 
-.chat {
-    flex-basis: 70%;
-
-}
 
 /*.chat, .dialogs {*/
 /*    transition: flex-basis 1s ease-out;*/
@@ -31,12 +27,10 @@
     gap: 1rem;
     align-items: center;
     cursor: pointer;
-    transition: background-color .4s ease-out;
 }
 
-.dialog_element:hover, .dialog_element:focus {
+.dialog_element:hover:not(.dialog_element.active), .dialog_element:focus:not(.dialog_element.active) {
     background: #202B36;
-    transition: background-color .4s ease-out;
 }
 
 .hover {
@@ -74,8 +68,113 @@
     margin-left: auto;
 }
 
+.chat {
+    flex-basis: 70%;
+    overflow-y: scroll;
+    padding: 3rem .5rem;
+    /* Check */
+    max-height: 100%;
+}
+
+.chat::-webkit-scrollbar {
+    width: 12px;
+}
+
+.chat::-webkit-scrollbar-track {
+    background-color: #17212B;
+    border-radius: 20px;
+
+}
+
+.chat::-webkit-scrollbar-thumb {
+    background-color: #0E1621;
+    border-radius: 20px;
+    border: 3px solid #17212B;
+}
+
 .cover {
     position: relative;
-    height: 1000px;
     opacity: .45;
+}
+
+.row {
+    position: relative;
+    margin-bottom: 2rem;
+    color: #E4ECF2;
+    display: flex;
+    font-size: 14px;
+}
+
+
+.received, .sent {
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    max-width: 90%;
+    padding: .7rem 1rem .5rem 1rem;
+}
+
+.received {
+    background-color: #182533;
+    border-radius: 10px 20px 20px 10px;
+}
+
+.sent {
+    background-color: #2B5378;
+    margin-left: auto;
+    border-radius: 20px 10px 10px 20px;
+}
+
+.text {
+    font-size: 16px;
+}
+
+.meta {
+    display: flex;
+    float: right;
+    gap: .5rem;
+    padding: .5rem 0 0 .5rem;
+    font-size: 14px;
+}
+
+/*.time,.status {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-self: flex-end;*/
+/*    margin: .5rem 0 .6rem .5rem;*/
+/*}*/
+
+.received .time, .sent .time {
+    color: #6D7F8F;
+}
+
+.status {
+    color: #E4ECF2;
+}
+
+.custom_scrollbar {
+    --scrollbar-color: rebeccapurple;
+    --scrollbar-track-color: #ccc;
+    --scrollbar-size: 8px;
+    --scrollbar-size-firefox: thin;
+    --scrollbar-color-hover: rgba(0, 0, 0, 0.3);
+    --scrollbar-color-active: rgb(0, 0, 0);
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-track-color);
+    scrollbar-width: var(--scrollbar-size-firefox);
+}
+.custom-scrollbar::-webkit-scrollbar {
+    height: var(--scrollbar-size);
+    width: var(--scrollbar-size);
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-color-hover);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+    background-color: var(--scrollbar-color-active);
 }

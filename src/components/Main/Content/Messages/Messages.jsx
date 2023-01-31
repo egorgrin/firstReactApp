@@ -1,8 +1,9 @@
 import s from './Messages.module.css';
-import { Parallax } from 'react-parallax';
 
-// import background from '../../../../img/cover.webp';
-import cover from '../../../../img/chatBg.png';
+import cover from '../../../../img/chatBg.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckDouble } from '@fortawesome/free-solid-svg-icons';
+// import { Scrollbar } from 'react-scrollbars-custom';
 
 const Messages = (props) => {
   return (
@@ -54,15 +55,153 @@ const Messages = (props) => {
           </div>
         </div>
       </div>
-      {/*<div
-        className={s.chat}
+      <div
+        className={`${s.chat} ${s.custom_scrollbar}`}
         style={{
-          backgroundImage: `url(${background})`,
-          backgroundSize: 'cover',
+          backgroundImage: `url(${cover})`,
+          backgroundSize: 'fill',
         }}
-      ></div>*/}
-      <div className={s.chat}>
-        <Parallax className={s.cover} bgImage={cover} strength={500}></Parallax>
+      >
+        <div className={s.row}>
+          <div className={s.received}>
+            <div className={s.text}>
+              Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet,
+              consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum
+              dolor sit amet, consecteturLorem ipsum dolor sit amet,
+              consectetur.
+              <div className={s.meta}>
+                <p className={s.time}>5:24 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={s.row}>
+          <div className={s.sent}>
+            <div className={s.text}>
+              Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum
+              dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem
+              ipsum dolor.
+              <div className={s.meta}>
+                <p className={s.time}>5:25 PM</p>
+                <p className={s.status}>
+                  <FontAwesomeIcon icon={faCheckDouble} />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={s.row}>
+          <div className={s.received}>
+            <div className={s.text}>
+              Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet,
+              consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum
+              dolor sit amet, consecteturLorem ipsum dolor sit amet,
+              consectetur.
+              <div className={s.meta}>
+                <p className={s.time}>5:24 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={s.row}>
+          <div className={s.sent}>
+            <div className={s.text}>
+              Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum
+              dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem
+              ipsum dolor.
+              <div className={s.meta}>
+                <p className={s.time}>5:25 PM</p>
+                <p className={s.status}>
+                  <FontAwesomeIcon icon={faCheckDouble} />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={s.row}>
+          <div className={s.received}>
+            <div className={s.text}>
+              Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet,
+              consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum
+              dolor sit amet, consecteturLorem ipsum dolor sit amet,
+              consectetur.
+              <div className={s.meta}>
+                <p className={s.time}>5:24 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={s.row}>
+          <div className={s.sent}>
+            <div className={s.text}>
+              Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum
+              dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem
+              ipsum dolor.
+              <div className={s.meta}>
+                <p className={s.time}>5:25 PM</p>
+                <p className={s.status}>
+                  <FontAwesomeIcon icon={faCheckDouble} />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={s.row}>
+          <div className={s.received}>
+            <div className={s.text}>
+              Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet,
+              consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum
+              dolor sit amet, consecteturLorem ipsum dolor sit amet,
+              consectetur.
+              <div className={s.meta}>
+                <p className={s.time}>5:24 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={s.row}>
+          <div className={s.sent}>
+            <div className={s.text}>
+              Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum
+              dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem
+              ipsum dolor.
+              <div className={s.meta}>
+                <p className={s.time}>5:25 PM</p>
+                <p className={s.status}>
+                  <FontAwesomeIcon icon={faCheckDouble} />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={s.row}>
+          <div className={s.received}>
+            <div className={s.text}>
+              Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet,
+              consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum
+              dolor sit amet, consecteturLorem ipsum dolor sit amet,
+              consectetur.
+              <div className={s.meta}>
+                <p className={s.time}>5:24 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={s.row}>
+          <div className={s.sent}>
+            <div className={s.text}>
+              Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum
+              dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem
+              ipsum dolor.
+              <div className={s.meta}>
+                <p className={s.time}>5:25 PM</p>
+                <p className={s.status}>
+                  <FontAwesomeIcon icon={faCheckDouble} />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

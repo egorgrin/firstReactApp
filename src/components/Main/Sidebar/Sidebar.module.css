@@ -3,7 +3,6 @@
     background-color: #17212B;
     padding: 0 0 3rem 0rem;
     flex-basis: 15%;
-
 }
 
 .nav {
@@ -12,30 +11,24 @@
     font-size: 20px;
     font-weight: bold;
     flex-direction: column;
-    gap: 1px;
     flex-grow: 1;
 }
 
 .nav li {
-    transition: all .5s ease-out;
     cursor: pointer;
     padding: 12px 2rem;
-    background: linear-gradient(to right, #2B5378 50%, transparent 50%) right;
-    background-size: 200% 100%;
 }
 
 .nav li:last-child {
     margin-top: auto;
 }
 
-.nav li:hover, .nav li:focus {
-    /*transform: scale(1.1) translateX(7%);*/
-    transition: all .2s ease-out;
-    background-position: left;
+.nav li:hover:not(.nav li.active), .nav li:focus:not(.nav li.active) {
+    background: #202B36;
 }
 
-.nav li.active {
-    background-position: left;
+.active {
+    background: #2B5378;
 }
 
 .nav a {
