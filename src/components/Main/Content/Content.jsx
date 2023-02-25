@@ -6,8 +6,8 @@ import Profile from "./Profile/Profile.jsx";
 const Content = () => {
   return (
     <section className={s.wrapper}>
-      {/*<Messages />*/}
-      <Profile />
+      <Messages />
+      {/*<Profile />*/}
     </section>
   );
 };

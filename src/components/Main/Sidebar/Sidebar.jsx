@@ -1,23 +1,23 @@
-import s from './Sidebar.module.css';
+import s from "./Sidebar.module.css";
 
 const Sidebar = () => {
   return (
     <aside className={s.wrapper}>
       <nav className={s.nav}>
         <li className={s.active}>
-          <a href="#">Profile</a>
+          <a href="/profile">Profile</a>
         </li>
         <li>
-          <a href="#">Messages</a>
+          <a href="/messages">Messages</a>
         </li>
         <li>
-          <a href="#">News</a>
+          <a href="/news">News</a>
         </li>
         <li>
-          <a href="#">Music</a>
+          <a href="/music">Music</a>
         </li>
         <li>
-          <a href="#">Settings</a>
+          <a href="/settings">Settings</a>
         </li>
       </nav>
     </aside>
