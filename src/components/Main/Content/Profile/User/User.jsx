@@ -1,9 +1,9 @@
-import s from './User.module.css';
+import s from "./User.module.css";
 
 // import { Parallax } from 'react-parallax';
-// import cover from '../../../../../img/cover.webp';
+import ava from "../../../../../img/ava.png";
 
-import Posts from './Posts/Posts.jsx';
+import Posts from "./Posts/Posts.jsx";
 
 const User = (props) => {
   return (
@@ -11,10 +11,7 @@ const User = (props) => {
       {/*<Parallax className={s.cover} bgImage={cover} strength={400}></Parallax>*/}
       <div className={s.cover}></div>
       <div className={s.profile_data}>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/147/147144.png"
-          alt=""
-        />
+        <img src={ava} alt="" />
         <div className={s.text_data}>
           <h2>
             Name: {props.firstName} {props.lastName}
