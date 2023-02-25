@@ -1,10 +1,10 @@
-import s from './Messages.module.css';
+import s from "./Messages.module.css";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckDouble } from '@fortawesome/free-solid-svg-icons';
-import { faPaperclip } from '@fortawesome/free-solid-svg-icons';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import cover from '../../../../img/chatBg.svg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckDouble, faGear } from "@fortawesome/free-solid-svg-icons";
+import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import cover from "../../../../img/chatBg.svg";
 // import { Scrollbar } from 'react-scrollbars-custom';
 
 const Messages = (props) => {
@@ -23,7 +23,7 @@ const Messages = (props) => {
             <p className={s.last_message}>Last message</p>
           </div>
           <div className={s.dialog_message_status}>
-            <p>Status</p>
+            <FontAwesomeIcon icon={faCheckDouble} />
           </div>
         </div>
         <div className={`${s.dialog_element} ${s.hover}`}>
@@ -38,7 +38,7 @@ const Messages = (props) => {
             <p className={s.last_message}>Last message</p>
           </div>
           <div className={s.dialog_message_status}>
-            <p>Status</p>
+            <FontAwesomeIcon icon={faCheckDouble} />
           </div>
         </div>
         <div className={`${s.dialog_element} ${s.active}`}>
@@ -53,7 +53,7 @@ const Messages = (props) => {
             <p className={s.last_message}>Last message</p>
           </div>
           <div className={s.dialog_message_status}>
-            <p>Status</p>
+            <FontAwesomeIcon icon={faCheckDouble} />
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@ const Messages = (props) => {
           className={`${s.chat} ${s.custom_scrollbar}`}
           style={{
             backgroundImage: `url(${cover})`,
-            backgroundSize: 'fill',
+            backgroundSize: "fill",
           }}
         >
           <div className={s.messages}>

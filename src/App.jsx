@@ -1,15 +1,18 @@
-import './App.css';
-import Main from './components/Main/Main.jsx';
-import Header from './components/Header/Header.jsx';
+import "./App.css";
+import Main from "./components/Main/Main.jsx";
+import Header from "./components/Header/Header.jsx";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="appBg">
-      <div className="app-wrapper">
-        <Header />
-        <Main />
+    <BrowserRouter>
+      <div className="appBg">
+        <div className="app-wrapper">
+          <Header />
+          <Main />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 };
 

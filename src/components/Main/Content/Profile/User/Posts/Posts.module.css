@@ -1,5 +1,5 @@
 .wrapper {
-    padding: 5rem 2rem 15rem 2rem;
+    padding: 5rem 2rem 5rem 2rem;
 }
 
 .add {
@@ -35,14 +35,15 @@
     padding: 0.6rem 1.5rem;
     color: #E4ECF2;
     font-size: 16px;
-    background: linear-gradient(45deg, #24B59E, #A450A8 50%) left bottom;
-    background-size: 200% 100%;
-    transition: background-position .5s ease-out;
+    background-color: #2B5378;
+    transition: background-color .3s ease-out;
     cursor: pointer;
 }
 .button:hover {
-    background-position: right top;
-    transition: background-position .4s ease-out;
+    /*background-color: #24B59E;*/
+    /*background-color: #A450A8;*/
+    background-color: #298AB2;
+    transition: background-color .2s ease-out;
 }
 
 .posts {

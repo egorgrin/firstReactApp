@@ -2,15 +2,12 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
 }
 
 .dialog_list {
-    -ms-flex-preferred-size: 30%;
-    flex-basis: 30%;
     background: #17212B;
+    flex-basis: 25%;
+    flex-shrink: 0;
 }
 
 .dialog_element {
@@ -69,11 +66,11 @@
 .chat_wrapper {
     display: flex;
     flex-direction: column;
-    flex-basis: 70%;
 }
 
 .chat {
     overflow: auto;
+    flex-grow: 1;
     padding: 1rem .5rem 1rem .5rem;
 }
 
