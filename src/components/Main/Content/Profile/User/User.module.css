@@ -3,7 +3,6 @@
 .profile_data {
     display: flex;
     align-items: center;
-    flex: auto;
     padding: 0 2rem;
     color: #E4ECF2;
 }

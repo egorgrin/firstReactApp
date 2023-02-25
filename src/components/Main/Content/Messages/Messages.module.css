@@ -5,7 +5,6 @@
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    max-height: 100vh;
 }
 
 .dialog_list {
@@ -74,8 +73,7 @@
 }
 
 .chat {
-    -ms-flex-preferred-size: 70%;
-    overflow-y: scroll;
+    overflow: auto;
     padding: 1rem .5rem 1rem .5rem;
 }
 

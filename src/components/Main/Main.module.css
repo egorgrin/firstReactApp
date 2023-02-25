@@ -2,6 +2,5 @@
     display: flex;
     gap: .5rem;
     flex-grow: 1;
-    height: 100vh;
     overflow: hidden;
 }

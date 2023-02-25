@@ -1,7 +1,7 @@
-import s from './Content.module.css';
+import s from "./Content.module.css";
 
-// import Messages from './Messages/Messages.jsx';
-import Profile from './Profile/Profile.jsx';
+import Messages from "./Messages/Messages.jsx";
+import Profile from "./Profile/Profile.jsx";
 
 const Content = () => {
   return (
