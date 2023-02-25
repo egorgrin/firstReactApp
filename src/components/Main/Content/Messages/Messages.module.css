@@ -14,17 +14,6 @@
     background: #17212B;
 }
 
-
-/*.chat, .dialogs {*/
-/*    transition: flex-basis 1s ease-out;*/
-/*}*/
-
-/*.wrapper:hover .chat, .wrapper:hover .dialogs {*/
-/*    flex-basis: 50%;*/
-/*    transition: flex-basis 1s ease-out;*/
-/*}*/
-
-
 .dialog_element {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -40,10 +29,6 @@
 
 .dialog_element:hover:not(.dialog_element.active), .dialog_element:focus:not(.dialog_element.active) {
     background: #202B36;
-}
-
-.hover {
-    /*background: #202B36;*/
 }
 
 .active {
@@ -94,16 +79,16 @@
     padding: 1rem .5rem 1rem .5rem;
 }
 
-.chat::-webkit-scrollbar {
+.chat::-webkit-scrollbar, textarea::-webkit-scrollbar {
     width: 12px;
 }
 
-.chat::-webkit-scrollbar-track {
+.chat::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track {
     background-color: #17212B;
 
 }
 
-.chat::-webkit-scrollbar-thumb {
+.chat::-webkit-scrollbar-thumb,textarea::-webkit-scrollbar-thumb {
     background-color: #0E1621;
     border: 3px solid #17212B;
 }
@@ -191,7 +176,7 @@
 }
 .input textarea {
     width: 100%;
-    padding: 0 2rem;
+    margin: 0 1.5rem 0 2rem;
     color: #8E8E8E;
     resize: none;
 }
