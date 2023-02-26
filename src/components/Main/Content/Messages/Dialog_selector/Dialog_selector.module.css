@@ -1,0 +1,59 @@
+.dialogs_element {
+  display: flex;
+  padding: .3rem 0;
+  gap: .7rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dialogs_element:not(:last-of-type) {
+  margin-bottom: .5rem;
+}
+
+.dialogs_element:hover:not(.dialogs_element.active), .dialogs_element:focus:not(.dialogs_element.active) {
+  background: #202B36;
+}
+
+.active {
+  background: #2B5378;
+}
+
+.dialog_user_avatar {
+  height: 50px;
+}
+
+.dialog_user_avatar img {
+  height: 100%;
+}
+
+.dialog_text_info {
+  width: 100%;
+  padding: .5rem 0 0;
+}
+
+.text_info_top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+
+.user_name {
+  color: #E4ECF2;
+  font-weight: bold;
+}
+
+.last_message {
+  font-size: 13px;
+  color: #91A3B5;
+}
+
+.dialog_meta {
+  display: flex;
+  gap: .5rem;
+  font-size: 14px;
+  color: #8E8E8E;
+}
+
+.time {
+  font-size: 12px;
+}

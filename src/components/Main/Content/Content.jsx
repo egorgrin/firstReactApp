@@ -8,8 +8,8 @@ const Content = () => {
   return (
     <section className={s.wrapper}>
       <Routes>
-        <Route path="/messages" element={<Messages />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/messages/*" element={<Messages />} />
+        <Route path="/profile/*" element={<Profile />} />
       </Routes>
     </section>
   );
