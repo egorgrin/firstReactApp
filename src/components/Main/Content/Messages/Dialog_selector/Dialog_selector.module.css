@@ -1,16 +1,12 @@
 .dialogs_element {
   display: flex;
-  padding: .3rem 0;
+  padding: .4rem .7rem;
   gap: .7rem;
   align-items: center;
   cursor: pointer;
 }
 
-.dialogs_element:not(:last-of-type) {
-  margin-bottom: .5rem;
-}
-
-.dialogs_element:hover:not(.dialogs_element.active), .dialogs_element:focus:not(.dialogs_element.active) {
+a.dialogs_element:hover:not(.active), a.dialogs_element:focus:not(.active) {
   background: #202B36;
 }
 

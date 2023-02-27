@@ -20,6 +20,7 @@
     max-height: 150px;
     background-color: #67737D;
     border-radius: 10px;
+    color: #E4ECF2;
 }
 
 .textarea textarea::placeholder {
@@ -27,17 +28,19 @@
 }
 
 .button {
-    margin-left: auto;
+
 }
 
 .button {
     border-radius: 3px;
     padding: 0.6rem 1.5rem;
     color: #E4ECF2;
-    font-size: 16px;
     background-color: #2B5378;
     transition: background-color .3s ease-out;
     cursor: pointer;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 14px;
 }
 .button:hover {
     /*background-color: #24B59E;*/

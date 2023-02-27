@@ -9,7 +9,12 @@ const Dialog_selector = (props) => {
   let path = `/messages/${props.userName.toLowerCase()}`;
 
   return (
-    <NavLink to={path}>
+    <NavLink
+      to={path}
+      className={(navData) =>
+        `${s.dialogs_element} ${navData.isActive ? s.active : ""}`
+      }
+    >
       <div className={s.dialogs_element}>
         <div className={s.dialog_user_avatar}>
           <img src={ava} alt="" />
