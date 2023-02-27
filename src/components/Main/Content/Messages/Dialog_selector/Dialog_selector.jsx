@@ -2,11 +2,12 @@ import s from "./Dialog_selector.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckDouble } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import ava from "../../../../../img/ava.png";
 
 const Dialog_selector = (props) => {
   let path = `/messages/${props.userName.toLowerCase()}`;
+
   return (
     <NavLink to={path}>
       <div className={s.dialogs_element}>

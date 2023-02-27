@@ -1,9 +1,9 @@
-import s from "./Chat_content.module.css";
+import s from "./ChatContent.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckDouble } from "@fortawesome/free-solid-svg-icons";
 
-const Chat_content = (props) => {
+const ChatContent = (props) => {
   return (
     <div className={`${s.chat_window}`}>
       <div className={s.messages}>
@@ -152,4 +152,4 @@ const Chat_content = (props) => {
   );
 };
 
-export default Chat_content;
+export default ChatContent;

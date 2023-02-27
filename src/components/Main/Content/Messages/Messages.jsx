@@ -1,6 +1,6 @@
 import s from "./Messages.module.css";
 import Dialog_selector from "./Dialog_selector/Dialog_selector";
-import Chat_window from "./Chat/Chat_window.jsx";
+import ChatWindow from "./Chat/ChatWindow.jsx";
 import { Route, Routes } from "react-router-dom";
 
 function Chat() {
@@ -16,7 +16,7 @@ const Messages = (props) => {
         <Dialog_selector userName="Johnny" />
       </div>
       <Routes>
-        <Route path={`/vi`} element={<Chat_window />} />
+        <Route path="/:userName" element={<ChatWindow />} />
       </Routes>
     </div>
   );

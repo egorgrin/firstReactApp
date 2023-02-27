@@ -1,11 +1,14 @@
-import s from "./Chat_window.module.css";
-import Chat_content from "./Chat_content/Chat_content.jsx";
+import s from "./ChatWindow.module.css";
+import ChatContent from "./Chat_content/ChatContent.jsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperclip, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import cover from "../../../../../img/chatBg.svg";
+import { useParams } from "react-router-dom";
 
-const Chat_window = (props) => {
+const ChatWindow = (props) => {
+  const a = useParams();
+  console.log(a);
   return (
     <div
       className={s.chat}
@@ -14,7 +17,7 @@ const Chat_window = (props) => {
         backgroundSize: "fill",
       }}
     >
-      <Chat_content />
+      <ChatContent />
       <div className={s.input}>
         <button className={s.attachment}>
           <FontAwesomeIcon icon={faPaperclip} />
@@ -28,4 +31,4 @@ const Chat_window = (props) => {
   );
 };
 
-export default Chat_window;
+export default ChatWindow;
