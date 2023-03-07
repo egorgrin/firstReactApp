@@ -3,11 +3,11 @@ import s from "./Main.module.css";
 import Content from "./Content/Content.jsx";
 import Sidebar from "./Sidebar/Sidebar.jsx";
 
-const Main = () => {
+const Main = (props) => {
   return (
     <main className={s.wrapper}>
       <Sidebar />
-      <Content />
+      <Content friends={props.friends} />
     </main>
   );
 };

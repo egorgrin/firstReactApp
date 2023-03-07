@@ -3,13 +3,13 @@ import Main from "./components/Main/Main.jsx";
 import Header from "./components/Header/Header.jsx";
 import { BrowserRouter } from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className="appBg">
         <div className="app-wrapper">
           <Header />
-          <Main />
+          <Main friends={props.friends} />
         </div>
       </div>
     </BrowserRouter>

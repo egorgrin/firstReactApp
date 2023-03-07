@@ -10,7 +10,7 @@ const User = (props) => {
     <div className={s.wrapper}>
       {/*<Parallax className={s.cover} bgImage={cover} strength={400}></Parallax>*/}
       <div className={s.cover}></div>
-      <div className={s.profile_data}>
+      <div className={s.data}>
         <img src={ava} alt="" />
         <div className={s.text_data}>
           <h2>

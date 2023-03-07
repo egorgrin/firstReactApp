@@ -4,11 +4,14 @@ import Messages from "./Messages/Messages.jsx";
 import Profile from "./Profile/Profile.jsx";
 import { Route, Routes } from "react-router-dom";
 
-const Content = () => {
+const Content = (props) => {
   return (
     <section className={s.wrapper}>
       <Routes>
-        <Route path="/messages/*" element={<Messages />} />
+        <Route
+          path="/messages/*"
+          element={<Messages friends={props.friends} />}
+        />
         <Route path="/profile/*" element={<Profile />} />
       </Routes>
     </section>

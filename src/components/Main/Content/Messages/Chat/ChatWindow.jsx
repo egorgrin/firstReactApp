@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 
 const ChatWindow = (props) => {
   const a = useParams();
-  console.log(a);
+  // console.log(a);
   return (
     <div
       className={s.chat}
@@ -17,7 +17,7 @@ const ChatWindow = (props) => {
         backgroundSize: "fill",
       }}
     >
-      <ChatContent />
+      {/*<ChatContent />*/}
       <div className={s.input}>
         <button className={s.attachment}>
           <FontAwesomeIcon icon={faPaperclip} />
