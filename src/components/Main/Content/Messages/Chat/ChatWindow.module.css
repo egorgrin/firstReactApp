@@ -3,38 +3,3 @@
   flex-direction: column;
   flex-grow: 1;
 }
-
-.input, .input textarea, .attachment, .send {
-  background-color: #17212B;
-}
-
-.input {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  border-left: 1px solid #0E1621;
-}
-
-.input textarea {
-  width: 100%;
-  margin: 0 1.5rem 0 2rem;
-  color: #8E8E8E;
-  resize: none;
-}
-
-.input textarea::placeholder {
-  color: #8E8E8E;
-}
-
-.attachment, .send {
-  font-size: 20px;
-}
-
-.attachment {
-  color: #8E8E8E;
-}
-
-.send {
-  color: #8E8E8E;
-}

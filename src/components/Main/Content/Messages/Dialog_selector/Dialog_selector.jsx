@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckDouble } from "@fortawesome/free-solid-svg-icons";
 import { NavLink, useParams } from "react-router-dom";
 import ava from "../../../../../img/ava.png";
+import Meta from "../../../../UI/Meta/Meta";
 
 const Dialog_selector = (props) => {
   let path = `/messages/${props.userName.toLowerCase()}`;
@@ -23,7 +24,7 @@ const Dialog_selector = (props) => {
           <div className={s.text_info_top}>
             <div className={s.user_name}>{props.userName}</div>
             <div className={s.dialog_meta}>
-              <div className={s.time}>5:25 PM</div>
+              <Meta time={`5:26 PM`} externalClass={s.last_message_time} />
               <FontAwesomeIcon icon={faCheckDouble} />
             </div>
           </div>

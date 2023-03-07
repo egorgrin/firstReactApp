@@ -2,6 +2,7 @@ import s from "./ChatContent.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckDouble } from "@fortawesome/free-solid-svg-icons";
+import Meta from "../../../../../UI/Meta/Meta";
 
 const ChatContent = (props) => {
   return (
@@ -15,7 +16,7 @@ const ChatContent = (props) => {
               dolor sit amet, consecteturLorem ipsum dolor sit amet,
               consectetur.
               <div className={s.message_meta}>
-                <p className={s.time}>5:24 PM</p>
+                <Meta time={`5:26 PM`} externalClass={s.time_sent} />
               </div>
             </div>
           </div>
@@ -27,7 +28,7 @@ const ChatContent = (props) => {
               dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem
               ipsum dolor.
               <div className={s.message_meta}>
-                <p className={s.time}>5:25 PM</p>
+                <Meta time={`5:26 PM`} externalClass={s.time_sent} />
                 <p className={s.status}>
                   <FontAwesomeIcon icon={faCheckDouble} />
                 </p>
@@ -43,7 +44,7 @@ const ChatContent = (props) => {
               dolor sit amet, consecteturLorem ipsum dolor sit amet,
               consectetur.
               <div className={s.message_meta}>
-                <p className={s.time}>5:24 PM</p>
+                <Meta time={`5:26 PM`} externalClass={s.time_sent} />
               </div>
             </div>
           </div>
@@ -55,7 +56,7 @@ const ChatContent = (props) => {
               dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem
               ipsum dolor.
               <div className={s.message_meta}>
-                <p className={s.time}>5:25 PM</p>
+                <Meta time={`5:26 PM`} externalClass={s.time_sent} />
                 <p className={s.status}>
                   <FontAwesomeIcon icon={faCheckDouble} />
                 </p>
@@ -71,7 +72,7 @@ const ChatContent = (props) => {
               dolor sit amet, consecteturLorem ipsum dolor sit amet,
               consectetur.
               <div className={s.message_meta}>
-                <p className={s.time}>5:24 PM</p>
+                <Meta time={`5:26 PM`} externalClass={s.time_sent} />
               </div>
             </div>
           </div>
@@ -83,7 +84,7 @@ const ChatContent = (props) => {
               dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem
               ipsum dolor.
               <div className={s.message_meta}>
-                <p className={s.time}>5:25 PM</p>
+                <Meta time={`5:26 PM`} externalClass={s.time_sent} />
                 <p className={s.status}>
                   <FontAwesomeIcon icon={faCheckDouble} />
                 </p>
@@ -99,7 +100,7 @@ const ChatContent = (props) => {
               dolor sit amet, consecteturLorem ipsum dolor sit amet,
               consectetur.
               <div className={s.message_meta}>
-                <p className={s.time}>5:24 PM</p>
+                <Meta time={`5:26 PM`} externalClass={s.time_sent} />
               </div>
             </div>
           </div>
@@ -111,7 +112,7 @@ const ChatContent = (props) => {
               dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem
               ipsum dolor.
               <div className={s.message_meta}>
-                <p className={s.time}>5:25 PM</p>
+                <Meta time={`5:26 PM`} externalClass={s.time_sent} />
                 <p className={s.status}>
                   <FontAwesomeIcon icon={faCheckDouble} />
                 </p>
@@ -127,7 +128,7 @@ const ChatContent = (props) => {
               dolor sit amet, consecteturLorem ipsum dolor sit amet,
               consectetur.
               <div className={s.message_meta}>
-                <p className={s.time}>5:24 PM</p>
+                <Meta time={`5:26 PM`} externalClass={s.time_sent} />
               </div>
             </div>
           </div>
@@ -139,7 +140,7 @@ const ChatContent = (props) => {
               dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem ipsum dolor.Lorem
               ipsum dolor.
               <div className={s.message_meta}>
-                <p className={s.time}>5:25 PM</p>
+                <Meta time={`5:26 PM`} externalClass={s.time_sent} />
                 <p className={s.status}>
                   <FontAwesomeIcon icon={faCheckDouble} />
                 </p>

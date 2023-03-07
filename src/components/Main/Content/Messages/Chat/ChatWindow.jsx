@@ -1,4 +1,5 @@
 import s from "./ChatWindow.module.css";
+import Input from "../../../../UI/Input/Input";
 import ChatContent from "./Chat_content/ChatContent.jsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,16 +18,8 @@ const ChatWindow = (props) => {
         backgroundSize: "fill",
       }}
     >
-      {/*<ChatContent />*/}
-      <div className={s.input}>
-        <button className={s.attachment}>
-          <FontAwesomeIcon icon={faPaperclip} />
-        </button>
-        <textarea placeholder="Enter your message" />
-        <button className={s.send}>
-          <FontAwesomeIcon icon={faPaperPlane} />
-        </button>
-      </div>
+      <ChatContent />
+      <Input />
     </div>
   );
 };

@@ -57,7 +57,8 @@
 /*    -webkit-text-fill-color: transparent;*/
 /*}*/
 .title h1 {
-    background: linear-gradient(45deg, #24B59E, #A450A8) left bottom;
+    /*background: linear-gradient(45deg, #24B59E, #A450A8) left bottom;*/
+    background: linear-gradient(45deg, #2499D6, #A450A8) left bottom;
     background-size: 200% 100%;
     animation: gradient 10s ease infinite;
     background-clip: text;

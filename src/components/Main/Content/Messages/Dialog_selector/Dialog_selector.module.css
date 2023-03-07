@@ -50,6 +50,6 @@ a.dialogs_element:hover:not(.active), a.dialogs_element:focus:not(.active) {
   color: #8E8E8E;
 }
 
-.time {
+.last_message_time {
   font-size: 12px;
 }
