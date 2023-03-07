@@ -9,17 +9,7 @@ const Messages = (props) => {
   ));
   return (
     <div className={s.wrapper}>
-      <div className={s.dialogs_list}>
-        {/*<Dialog_selector userName="Vi" />
-        <Dialog_selector userName="Jackie" />
-        <Dialog_selector userName="Johnny" />*/}
-
-        {/* Lesson 25 .map method */}
-
-        {dialogSelectors}
-
-        {/* ---------- */}
-      </div>
+      <div className={s.dialogs_list}>{dialogSelectors}</div>
       <Routes>
         <Route path="/:userName" element={<ChatWindow />} />
       </Routes>
