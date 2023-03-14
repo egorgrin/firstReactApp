@@ -9,7 +9,7 @@ const Message = (props) => {
   // console.log(props.text);
   return (
     <div className={s.row}>
-      <div id={props.key} className={isUser ? `${s.sent}` : `${s.received}`}>
+      <div id={props.id} className={isUser ? `${s.sent}` : `${s.received}`}>
         <div className={s.text}>
           <span>{`${props.message}`}</span>
           <div className={s.message_meta}>

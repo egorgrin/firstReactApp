@@ -6,8 +6,13 @@ import cover from "../../../../../img/chatBg.svg";
 const Chat = (props) => {
   /*const a = useParams();
   console.log(a);*/
-  let messages = props.state.messages.map((message) => (
-    <Message key={message.id} userId={message.userId} message={message.text} />
+  let messages = props.messages.map((message) => (
+    <Message
+      key={message.id}
+      id={message.id}
+      userId={message.userId}
+      message={message.text}
+    />
   ));
   return (
     <div
