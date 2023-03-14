@@ -21,7 +21,7 @@ const Sidebar = () => {
               <div className={s.icon}>
                 <FontAwesomeIcon icon={faUser} />
               </div>
-              <div className={s.link}>Profile</div>
+              <div className={s.text}>Profile</div>
             </div>
           </NavLink>
         </li>
@@ -34,7 +34,7 @@ const Sidebar = () => {
               <div className={s.icon}>
                 <FontAwesomeIcon icon={faEnvelope} />
               </div>
-              <div className={s.link}>Messages</div>
+              <div className={s.text}>Messages</div>
             </div>
           </NavLink>
         </li>
@@ -47,7 +47,7 @@ const Sidebar = () => {
               <div className={s.icon}>
                 <FontAwesomeIcon icon={faNewspaper} />
               </div>
-              <div className={s.link}>News</div>
+              <div className={s.text}>News</div>
             </div>
           </NavLink>
         </li>
@@ -60,7 +60,7 @@ const Sidebar = () => {
               <div className={s.icon}>
                 <FontAwesomeIcon icon={faMusic} />
               </div>
-              <div className={s.link}>Music</div>
+              <div className={s.text}>Music</div>
             </div>
           </NavLink>
         </li>
@@ -73,7 +73,7 @@ const Sidebar = () => {
               <div className={s.icon}>
                 <FontAwesomeIcon icon={faGear} />
               </div>
-              <div className={s.link}>Settings</div>
+              <div className={s.text}>Settings</div>
             </div>
           </NavLink>
         </li>

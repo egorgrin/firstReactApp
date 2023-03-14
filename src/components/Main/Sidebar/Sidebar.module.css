@@ -1,7 +1,6 @@
 .wrapper {
     display: flex;
     background-color: #17212B;
-    /*padding: 0 0 3rem 0rem;*/
     flex-basis: 20%;
     flex-shrink: 0;
 }
@@ -17,7 +16,8 @@ nav {
 
 nav a {
     display: block;
-    padding: 12px 1rem;
+    padding: 1rem 1.5rem;
+    color: #E4ECF2;
 }
 
 nav li:last-child {
@@ -28,10 +28,6 @@ nav a:hover:not(nav a.active), nav a:focus:not(nav a.active) {
     background: #202B36;
 }
 
-nav a {
-    color: #E4ECF2;
-}
-
 nav a.active {
     background: #2B5378!important;
 }
@@ -39,8 +35,23 @@ nav a.active {
 .item {
     display: flex;
     align-items: center;
+    gap: 1rem
 }
 
-.icon {
-    padding: .5rem 1rem .5rem .5rem;
+@media (max-width: 992px) {
+    nav a {
+        padding: 1rem;
+    }
+    .icon {
+        padding: 0;
+    }
+    .item {
+        justify-content: center;
+    }
+    .text {
+        display: none;
+    }
+    .wrapper {
+        flex-basis: 10%;
+    }
 }

@@ -10,36 +10,69 @@ const User = (props) => {
     <div className={s.wrapper}>
       {/*<div className={s.cover}></div>*/}
       <div className={s.aside}>
-        <img className={s.avatar} src={ava} alt="" />
+        <div className={s.sliding_inner}>
+          <img className={s.avatar} src={ava} alt="" />
+          <div className={s.friends_widget_wrapper}>
+            <h3 className={s.friends_widget_title}>Friends 999</h3>
+            <div className={s.friends_widget}>
+              <div className={s.friends_widget_item}>
+                <img src={ava} alt="" />
+                <span>Name</span>
+              </div>
+              <div className={s.friends_widget_item}>
+                <img src={ava} alt="" />
+                <span>Name</span>
+              </div>
+              <div className={s.friends_widget_item}>
+                <img src={ava} alt="" />
+                <span>Name</span>
+              </div>
+              <div className={s.friends_widget_item}>
+                <img src={ava} alt="" />
+                <span>Name</span>
+              </div>
+              <div className={s.friends_widget_item}>
+                <img src={ava} alt="" />
+                <span>Name</span>
+              </div>
+              <div className={s.friends_widget_item}>
+                <img src={ava} alt="" />
+                <span>Name</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className={s.main}>
         {/*<Parallax className={s.cover} bgImage={cover} strength={400}></Parallax>*/}
 
         <div className={s.data}>
-          <div className={s.text_data}>
-            <h2>
-              Name: {props.firstName} {props.lastName}
-            </h2>
-            <p>
-              <b>Date of Birth:</b> {props.dob}
-            </p>
-            <p>
-              <b>City:</b> Orenburg
-            </p>
-            <p>
-              <b>Education:</b> Self-thought
-            </p>
-            <p>
-              <b>WebSite:</b> GitHub
-            </p>
+          {/*<div className={s.text_data}>
+            <div className={s.text_data_left}>
+              <p>Name:</p>
+              <p>Date of Birth:</p>
+              <p>City:</p>
+              <p>Education:</p>
+              <p>WebSite:</p>
+            </div>
+            <div className={s.text_data_right}>
+              <p>
+                {props.firstName} {props.lastName}
+              </p>
+              <p>{props.dob}</p>
+              <p>Orenburg</p>
+              <p>Self-thought</p>
+              <p>GitHub</p>
+            </div>
           </div>
+
           <div className={`${s.stats}`}>
             <div className={`${s.friends} ${s.stats_item}`}>
-              <span className={`${s.stats_count}`}>400</span>
+              <span className={`${s.stats_count}`}>999</span>
               <span className={`${s.stats_category}`}>friends</span>
             </div>
             <div className={`${s.followers} ${s.stats_item}`}>
-              <span className={`${s.stats_count}`}>666</span>
+              <span className={`${s.stats_count}`}>999</span>
               <span className={`${s.stats_category}`}>followers</span>
             </div>
             <div className={`${s.photos} ${s.stats_item}`}>
@@ -47,9 +80,42 @@ const User = (props) => {
               <span className={`${s.stats_category}`}>photos</span>
             </div>
             <div className={`${s.shorts} ${s.stats_item}`}>
-              <span className={`${s.stats_count}`}>333</span>
+              <span className={`${s.stats_count}`}>999</span>
               <span className={`${s.stats_category}`}>shorts</span>
-            </div>
+            </div>*/}
+
+          <div className={`${s.text_data} ${s.text_data_left}`}>
+            <p>Name:</p>
+            <p>Date of Birth:</p>
+            <p>City:</p>
+            <p>Education:</p>
+            <p>WebSite:</p>
+          </div>
+          <div className={`${s.text_data} ${s.text_data_right}`}>
+            <p>
+              {props.firstName} {props.lastName}
+            </p>
+            <p>{props.dob}</p>
+            <p>Orenburg</p>
+            <p>Self-thought</p>
+            <p>GitHub</p>
+          </div>
+
+          <div className={`${s.friends} ${s.stats_item}`}>
+            <span className={`${s.stats_count}`}>999</span>
+            <span className={`${s.stats_category}`}>friends</span>
+          </div>
+          <div className={`${s.followers} ${s.stats_item}`}>
+            <span className={`${s.stats_count}`}>999</span>
+            <span className={`${s.stats_category}`}>followers</span>
+          </div>
+          <div className={`${s.photos} ${s.stats_item}`}>
+            <span className={`${s.stats_count}`}>999</span>
+            <span className={`${s.stats_category}`}>photos</span>
+          </div>
+          <div className={`${s.shorts} ${s.stats_item}`}>
+            <span className={`${s.stats_count}`}>999</span>
+            <span className={`${s.stats_category}`}>shorts</span>
           </div>
         </div>
 

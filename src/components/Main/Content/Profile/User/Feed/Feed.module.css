@@ -29,5 +29,5 @@ textarea::placeholder {
   flex-direction: column;
   align-items: center;
   background-color: #17212B;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }

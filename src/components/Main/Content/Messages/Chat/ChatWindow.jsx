@@ -15,7 +15,7 @@ const ChatWindow = (props) => {
         backgroundSize: "fill",
       }}
     >
-      <ChatContent />
+      {/*<ChatContent />*/}
       <Input />
     </div>
   );

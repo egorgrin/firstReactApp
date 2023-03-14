@@ -1,57 +1,110 @@
 .wrapper {
-    display: flex;
-    gap: .5rem;
+  display: flex;
+  gap: .5rem;
 }
 
+/* Sidebar styles*/
+
 .aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-basis: 15%;
-    padding: 2rem 1rem;
-    flex-grow: 0;
-    background-color: #17212B;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 30%;
+  padding: 0 1rem;
+  flex-grow: 0;
+  background-color: #17212B;
+}
+
+.sliding_inner {
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .avatar {
-    max-width: 200px;
-    display: block;
+  width: 200px;
+  margin-bottom: 3rem;
 }
 
+.friends_widget_wrapper {
+  width: 100%;
+}
+
+.friends_widget_title {
+  margin-bottom: 2rem;
+}
+
+.friends_widget {
+  display: grid;
+  /*display: grid;
+  grid-template: 1fr / repeat(3, 1fr);*/
+  grid-template-columns: repeat(3, 1fr);
+
+  /*    display: flex;
+      flex-wrap: wrap;*/
+
+}
+
+.friends_widget_item {
+  /*flex-basis: 33.33333333333333333333%;*/
+  display: flex;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.friends_widget_item img {
+  height: 50px;
+  margin-bottom: .5rem;
+}
+
+/* Main styles */
+
 .main {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: .5rem
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: .5rem;
+
 }
 
 .data {
-    display: flex;
-    flex-direction: column;
-    background-color: #17212B;
-    padding: 2rem;
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(4, 1fr);
+    row-gap: 3rem;
+  justify-items: center;
+  align-items: center;
+  background-color: #17212B;
+  padding: 2rem;
 }
 
 .text_data {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+    padding: 1rem 0;
 }
 
-.text_data > * {
-    margin-bottom: 0.5rem;
+.text_data p:not(:last-child) {
+    margin-bottom: .5rem;
 }
 
-.stats {
-    display: grid;
-    grid-template: 1fr / repeat(4, 1fr);
+.text_data_right {
+  justify-self: center;
+  grid-column: span 2 / 4;
+}
+
+.text_data_right p {
+  font-weight: bold;
 }
 
 .stats_item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  grid-row: 2;
 }
 
 /*-------Parallax Cover:------- */
@@ -66,31 +119,32 @@
 /*-------Static Cover:------- */
 
 .cover {
-    position: relative;
-    margin-bottom: 3rem;
-    height: 250px;
-    padding: 0;
+  position: relative;
+  margin-bottom: 3rem;
+  height: 250px;
+  padding: 0;
 }
 
 .cover:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    background: url('../../../../../img/cover.webp');
-    background-size: cover;
-    transform-origin: center center 0;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: url('../../../../../img/cover.webp');
+  background-size: cover;
+  transform-origin: center center 0;
 }
 
 .stats_item {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .stats_count {
-    font-weight: bold;
-    color: #2499D6;
-    margin-bottom: 5px;
+  font-weight: bold;
+  color: #2499D6;
+  margin-bottom: 5px;
 }
+
