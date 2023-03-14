@@ -7,7 +7,7 @@ const Main = (props) => {
   return (
     <main className={s.wrapper}>
       <Sidebar />
-      <Content friends={props.friends} />
+      <Content state={props.state} />
     </main>
   );
 };

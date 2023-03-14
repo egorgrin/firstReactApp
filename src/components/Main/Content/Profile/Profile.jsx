@@ -1,7 +1,7 @@
-import s from './Profile.module.css';
-import User from './User/User.jsx';
+import s from "./Profile.module.css";
+import User from "./User/User.jsx";
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <div className={s.wrapper}>
       <User firstName="Egor" lastName="Gurinovich" dob="25/06/1992" />

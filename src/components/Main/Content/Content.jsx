@@ -8,10 +8,7 @@ const Content = (props) => {
   return (
     <section className={s.wrapper}>
       <Routes>
-        <Route
-          path="/messages/*"
-          element={<Messages friends={props.friends} />}
-        />
+        <Route path="/messages/*" element={<Messages state={props.state} />} />
         <Route path="/profile/*" element={<Profile />} />
       </Routes>
     </section>

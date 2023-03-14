@@ -2,7 +2,7 @@ import s from "./Meta.module.css";
 
 const Meta = (props) => {
   return (
-    <div className={s.wrapper}>
+    <span className={s.wrapper}>
       {props.date ? (
         <span className={`${s.date} ${props.externalClass}`}>{props.date}</span>
       ) : (
@@ -14,7 +14,7 @@ const Meta = (props) => {
       ) : (
         ``
       )}
-    </div>
+    </span>
   );
 };
 

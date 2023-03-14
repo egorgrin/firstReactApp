@@ -3,27 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
-let friends = [
-  {
-    id: 0,
-    name: `Vi`,
-  },
-  {
-    id: 1,
-    name: `Jackie`,
-  },
-
-  {
-    id: 2,
-    name: `Johnny`,
-  },
-];
+import state from "./redux/state";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App friends={friends} />
+    <App state={state} />
   </React.StrictMode>
 );
 

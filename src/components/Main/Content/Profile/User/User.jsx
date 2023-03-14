@@ -47,43 +47,6 @@ const User = (props) => {
         {/*<Parallax className={s.cover} bgImage={cover} strength={400}></Parallax>*/}
 
         <div className={s.data}>
-          {/*<div className={s.text_data}>
-            <div className={s.text_data_left}>
-              <p>Name:</p>
-              <p>Date of Birth:</p>
-              <p>City:</p>
-              <p>Education:</p>
-              <p>WebSite:</p>
-            </div>
-            <div className={s.text_data_right}>
-              <p>
-                {props.firstName} {props.lastName}
-              </p>
-              <p>{props.dob}</p>
-              <p>Orenburg</p>
-              <p>Self-thought</p>
-              <p>GitHub</p>
-            </div>
-          </div>
-
-          <div className={`${s.stats}`}>
-            <div className={`${s.friends} ${s.stats_item}`}>
-              <span className={`${s.stats_count}`}>999</span>
-              <span className={`${s.stats_category}`}>friends</span>
-            </div>
-            <div className={`${s.followers} ${s.stats_item}`}>
-              <span className={`${s.stats_count}`}>999</span>
-              <span className={`${s.stats_category}`}>followers</span>
-            </div>
-            <div className={`${s.photos} ${s.stats_item}`}>
-              <span className={`${s.stats_count}`}>999</span>
-              <span className={`${s.stats_category}`}>photos</span>
-            </div>
-            <div className={`${s.shorts} ${s.stats_item}`}>
-              <span className={`${s.stats_count}`}>999</span>
-              <span className={`${s.stats_category}`}>shorts</span>
-            </div>*/}
-
           <div className={`${s.text_data} ${s.text_data_left}`}>
             <p>Name:</p>
             <p>Date of Birth:</p>
