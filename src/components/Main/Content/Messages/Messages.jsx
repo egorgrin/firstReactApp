@@ -17,9 +17,8 @@ let friends = [
     name: `Johnny`,
   },
 ];
-const Messages = (props) => {
-  let messages = props.state.messages;
-  console.log(messages);
+const Messages = ({ dialogs }) => {
+  // console.log(props);
   let dialogSelectors = friends.map((friend) => (
     <Dialog_selector userName={friend.name} key={friend.id} />
   ));
@@ -27,7 +26,10 @@ const Messages = (props) => {
     <div className={s.wrapper}>
       <div className={s.dialogs_list}>{dialogSelectors}</div>
       <Routes>
-        <Route path="/:userName" element={<Chat messages={messages} />} />
+        <Route
+          path="/:userName"
+          element={<Chat messages={dialogs.messages} />}
+        />
       </Routes>
     </div>
   );

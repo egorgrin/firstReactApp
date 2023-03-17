@@ -8,8 +8,14 @@ const Content = (props) => {
   return (
     <section className={s.wrapper}>
       <Routes>
-        <Route path="/messages/*" element={<Messages state={props.state} />} />
-        <Route path="/profile/*" element={<Profile />} />
+        <Route
+          path="/messages/*"
+          element={<Messages dialogs={props.state.dialogs} />}
+        />
+        <Route
+          path="/profile/*"
+          element={<Profile friends={props.state.user.friends} />}
+        />
       </Routes>
     </section>
   );

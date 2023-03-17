@@ -40,26 +40,8 @@
 
 .friends_widget {
   display: grid;
-  /*display: grid;
-  grid-template: 1fr / repeat(3, 1fr);*/
   grid-template-columns: repeat(3, 1fr);
 
-  /*    display: flex;
-      flex-wrap: wrap;*/
-
-}
-
-.friends_widget_item {
-  /*flex-basis: 33.33333333333333333333%;*/
-  display: flex;
-  margin-bottom: 1rem;
-  flex-direction: column;
-  align-items: center;
-}
-
-.friends_widget_item img {
-  height: 50px;
-  margin-bottom: .5rem;
 }
 
 /* Main styles */
@@ -106,17 +88,6 @@
 
   grid-row: 2;
 }
-
-/*-------Parallax Cover:------- */
-
-/*.cover {
-    position: relative;
-    height: 250px;
-    margin-bottom: 3rem;
-}*/
-
-
-/*-------Static Cover:------- */
 
 .cover {
   position: relative;

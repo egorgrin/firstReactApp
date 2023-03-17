@@ -1,10 +1,15 @@
 import s from "./Profile.module.css";
 import User from "./User/User.jsx";
 
-const Profile = (props) => {
+const Profile = ({ friends }) => {
   return (
     <div className={s.wrapper}>
-      <User firstName="Egor" lastName="Gurinovich" dob="25/06/1992" />
+      <User
+        friends={friends}
+        firstName="Egor"
+        lastName="Gurinovich"
+        dob="25/06/1992"
+      />
     </div>
   );
 };
