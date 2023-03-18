@@ -6,7 +6,7 @@ import TextArea from "../../../../../UI/Input/Input";
 const Feed = () => {
   return (
     <div className={s.wrapper}>
-      <div className={s.add}>
+      <div className={s.input}>
         <TextArea externalClass={s.input} />
       </div>
       <div className={s.feed}>

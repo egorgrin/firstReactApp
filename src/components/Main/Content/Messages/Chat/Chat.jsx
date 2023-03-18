@@ -24,7 +24,9 @@ const Chat = (props) => {
       }}
     >
       <div className={`${s.chat_window}`}>{messages}</div>
-      <Input />
+      <div className={`${s.chat_input}`}>
+        <Input />
+      </div>
     </div>
   );
 };

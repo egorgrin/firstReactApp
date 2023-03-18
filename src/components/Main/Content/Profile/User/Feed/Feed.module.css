@@ -2,32 +2,14 @@
 
 }
 
-.add {
-  display: flex;
-  justify-content: space-between;
-  /*background-color: #17212B;*/
-  margin-bottom: .5rem;
-
-}
-
 .input {
-  width: 100%;
-}
-
-.input textarea {
-  font-size: 14px;
-  resize: none;
-}
-
-textarea::placeholder {
-  color: #E4ECF2;
-  font-size: 14px;
+  margin-bottom: var(--module-gap);
 }
 
 .feed {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #17212B;
+  background-color: var(--section-bg);
   padding: 2rem 1rem;
 }

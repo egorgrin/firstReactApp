@@ -1,14 +1,6 @@
-.cover {
-  position: relative;
-  opacity: .45;
-}
-
 .row {
-  position: relative;
-  color: #E4ECF2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  color: var(--blue-white);
   font-size: 14px;
 }
 
@@ -17,14 +9,6 @@
 }
 
 .received, .sent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: .5rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   max-width: 70%;
   padding: .7rem 1rem .5rem 1rem;
 }
@@ -35,7 +19,7 @@
 }
 
 .sent {
-  background-color: #2B5378;
+  background-color: var(--tg-blue);
   margin-left: auto;
   border-radius: 20px 10px 10px 20px;
 }
@@ -47,27 +31,16 @@
 
 .message_meta {
   display: inline-flex;
-  align-items: center;
+  /*align-items: center;*/
   float: right;
   gap: .3rem;
   padding: 0 0 0 1rem;
   font-size: 14px;
 }
 
-/*.time,.status {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-self: flex-end;*/
-/*    margin: .5rem 0 .6rem .5rem;*/
-/*}*/
-
-.received .time, .sent .time {
-  color: #6D7F8F;
-}
-
 .status {
   font-size: 12px;
-  color: grey;
+  color: var(--grey);
 }
 
 .time_sent {

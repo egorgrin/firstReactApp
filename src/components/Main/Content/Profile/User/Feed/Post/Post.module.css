@@ -1,6 +1,4 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
   max-width: 500px;
   margin-bottom: 2rem;
 }
@@ -9,7 +7,6 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-
 }
 
 .user_info {
@@ -38,13 +35,16 @@
 .content {
   width: 100%;
   font-size: 16px;
-  color: #E4ECF2;
   height: 100%;
   border-radius: 3px;
 }
 
 .post_text {
   margin-bottom: .5rem;
+}
+
+.main_img_wrapper, .img_gallery_item {
+  cursor: pointer;
 }
 
 .main_img_wrapper {
@@ -97,12 +97,10 @@
 .img_gallery {
   display: grid;
   grid-template: 100px / repeat(5, 1fr);
-  /*gap: 1px;*/
 }
 
 .img_gallery_item {
   display: flex;
-
 }
 
 .img_gallery_item img {
@@ -111,7 +109,7 @@
 }
 
 .img_gallery_item:not(:last-child) {
-  border-right: 1px solid #202B36;
+  border-right: 1px solid var(--section-bg);
 }
 
 @media (max-width: 974px) {
@@ -143,9 +141,8 @@
 }
 
 .actionLike {
-  /*color: #e83939;*/
-  margin: 0 1.5rem 0 0;
-  color: grey;
+  margin: 0 1rem 0 0;
+  color: var(--blue-bright);
 }
 
 .actionDislike {

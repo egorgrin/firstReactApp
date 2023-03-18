@@ -10,16 +10,20 @@
   padding: 1rem .5rem 1rem .5rem;
 }
 
+.chat_input {
+  border-left: 1px solid var(--bg);
+}
+
 .chat_window::-webkit-scrollbar, textarea::-webkit-scrollbar {
   width: 12px;
 }
 
 .chat_window::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track {
-  background-color: #17212B;
+  background-color: var(--section-bg);
 
 }
 
 .chat_window::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb {
-  background-color: #0E1621;
-  border: 3px solid #17212B;
+  background-color: var(--bg);
+  border: 3px solid var(--section-bg);;
 }

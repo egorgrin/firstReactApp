@@ -1,6 +1,6 @@
 .wrapper {
     display: flex;
-    gap: .5rem;
+    gap: var(--module-gap);
     flex-grow: 1;
     overflow: hidden;
 }

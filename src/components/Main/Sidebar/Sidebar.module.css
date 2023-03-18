@@ -1,6 +1,6 @@
 .wrapper {
     display: flex;
-    background-color: #17212B;
+    background-color: var(--section-bg);
     flex-basis: 20%;
     flex-shrink: 0;
 }
@@ -17,7 +17,7 @@ nav {
 nav a {
     display: block;
     padding: 1rem 1.5rem;
-    color: #E4ECF2;
+    color: var(--blue-white);
 }
 
 nav li:last-child {
@@ -25,11 +25,11 @@ nav li:last-child {
 }
 
 nav a:hover:not(nav a.active), nav a:focus:not(nav a.active) {
-    background: #202B36;
+    background-color: var(--blue-hover);
 }
 
 nav a.active {
-    background: #2B5378!important;
+    background-color: var(--tg-blue);
 }
 
 .item {

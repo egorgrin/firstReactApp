@@ -7,11 +7,11 @@
 }
 
 a.dialogs_element:hover:not(.active), a.dialogs_element:focus:not(.active) {
-  background: #202B36;
+  background-color: var(--blue-hover);
 }
 
 .active {
-  background: #2B5378;
+  background-color: var(--tg-blue);
 }
 
 .dialog_user_avatar {
@@ -23,7 +23,6 @@ a.dialogs_element:hover:not(.active), a.dialogs_element:focus:not(.active) {
 }
 
 .dialog_text_info {
-  width: 100%;
   padding: .5rem 0 0;
 }
 
@@ -34,22 +33,22 @@ a.dialogs_element:hover:not(.active), a.dialogs_element:focus:not(.active) {
 }
 
 .user_name {
-  color: #E4ECF2;
+  color: var(--blue-white);
   font-weight: bold;
 }
 
 .last_message {
   font-size: 13px;
-  color: #91A3B5;
+  color: var(--blue-grey);
 }
 
 .dialog_meta {
   display: flex;
-  gap: .5rem;
+  gap: var(--module-gap);
   font-size: 14px;
-  color: #8E8E8E;
+  color: var(--grey);
 }
 
 .last_message_time {
-  font-size: 12px;
+  font-size: 14px;
 }

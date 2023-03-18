@@ -4,7 +4,7 @@ textarea {
   height: 50px;
 }
 .input, .input textarea, .attachment, .send {
-  background-color: #17212B;
+  background-color: var(--section-bg);
 }
 
 .input {
@@ -12,18 +12,17 @@ textarea {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  border-left: 1px solid #0E1621;
 }
 
 textarea {
   width: 100%;
-  color: #E4ECF2;
+  color: var(--blue-white);
   padding: 1rem 2rem;
-  /*background-color: #E4ECF2;*/
 }
 
 textarea::placeholder {
-  color: #8E8E8E;
+  color: var(--blue-white);
+  font-size: 14px;
 }
 
 .attachment, .send {

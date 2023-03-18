@@ -1,6 +1,6 @@
 .wrapper {
-    background-color: #17212B;
-    margin-bottom: .5rem;
+    background-color: var(--section-bg);
+    margin-bottom: var(--module-gap);
     padding: .5rem 1rem;
     height: 100px;
     display: flex;
@@ -21,8 +21,8 @@
 
 .logoFace {
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     height: 100%;
     animation: App-logo-spin-right infinite 40s linear;
 }
@@ -58,7 +58,7 @@
 /*}*/
 .title h1 {
     /*background: linear-gradient(45deg, #24B59E, #A450A8) left bottom;*/
-    background: linear-gradient(45deg, #2499D6, #A450A8) left bottom;
+    background: linear-gradient(45deg, var(--blue-bright), var(--pink)) left bottom;
     background-size: 200% 100%;
     animation: gradient 10s ease infinite;
     background-clip: text;
@@ -67,12 +67,12 @@
 
 @keyframes gradient {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
     50% {
         background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 }
