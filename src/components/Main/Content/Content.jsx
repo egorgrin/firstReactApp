@@ -10,11 +10,11 @@ const Content = (props) => {
       <Routes>
         <Route
           path="/messages/*"
-          element={<Messages dialogs={props.state.dialogs} />}
+          element={<Messages user={props.state.user} />}
         />
         <Route
           path="/profile/*"
-          element={<Profile friends={props.state.user.friends} />}
+          element={<Profile friends={props.state.user} />}
         />
       </Routes>
     </section>
