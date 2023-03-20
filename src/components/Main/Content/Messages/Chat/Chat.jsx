@@ -10,7 +10,7 @@ const Chat = ({ user }) => {
     (friend) => friend.name.toLowerCase() === userName.toLowerCase()
   );
   let messages = friend.dialog.map((message) => (
-    <Message friend={friend} message={message} />
+    <Message friend={friend} message={message} key={message.id} />
   ));
   return (
     <div

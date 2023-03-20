@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 const Messages = ({ user }) => {
   // console.log(props);
   let dialogSelectors = user.friends.map((friend) => (
-    <Dialog_selector userName={friend.name} key={friend.id} />
+    <Dialog_selector friend={friend} key={friend.id} />
   ));
   return (
     <div className={s.wrapper}>

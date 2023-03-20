@@ -4,6 +4,7 @@
   gap: .7rem;
   align-items: center;
   cursor: pointer;
+  width: 100%;
 }
 
 a.dialogs_element:hover:not(.active), a.dialogs_element:focus:not(.active) {
@@ -23,6 +24,9 @@ a.dialogs_element:hover:not(.active), a.dialogs_element:focus:not(.active) {
 }
 
 .dialog_text_info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   padding: .5rem 0 0;
 }
 
@@ -39,16 +43,18 @@ a.dialogs_element:hover:not(.active), a.dialogs_element:focus:not(.active) {
 
 .last_message {
   font-size: 13px;
+  /*max-height: 13px;*/
   color: var(--blue-grey);
 }
 
 .dialog_meta {
   display: flex;
+  margin-left: auto;
   gap: var(--module-gap);
   font-size: 14px;
   color: var(--grey);
 }
 
 .last_message_time {
-  font-size: 14px;
+  font-size: 13px;
 }

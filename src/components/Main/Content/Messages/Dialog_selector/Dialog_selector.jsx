@@ -6,9 +6,12 @@ import { NavLink, useParams } from "react-router-dom";
 import ava from "../../../../../img/ava.png";
 import Meta from "../../../../UI/Meta/Meta";
 
-const Dialog_selector = (props) => {
-  let path = `/messages/${props.userName.toLowerCase()}`;
-
+const Dialog_selector = ({ friend }) => {
+  let path = `/messages/${friend.name.toLowerCase()}`;
+  let lastMessage = friend.dialog.at(-1).text.split(" ").slice(0, 10);
+  lastMessage[lastMessage.length - 1] = lastMessage[
+    lastMessage.length - 1
+  ].replace(/[^ЁА-Яёа-я0-9]/g, "");
   return (
     <NavLink
       to={path}
@@ -22,15 +25,13 @@ const Dialog_selector = (props) => {
         </div>
         <div className={s.dialog_text_info}>
           <div className={s.text_info_top}>
-            <div className={s.user_name}>{props.userName}</div>
+            <div className={s.user_name}>{friend.name}</div>
             <div className={s.dialog_meta}>
               <Meta time={`5:26 PM`} externalClass={s.last_message_time} />
               <FontAwesomeIcon icon={faCheckDouble} />
             </div>
           </div>
-          <div className={s.last_message}>
-            <p>Last message text Lorem ipsum dolor.</p>
-          </div>
+          <p className={s.last_message}>{lastMessage.join(` `)}...</p>
         </div>
       </div>
     </NavLink>
