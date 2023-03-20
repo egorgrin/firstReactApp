@@ -6,11 +6,12 @@ import { useParams } from "react-router-dom";
 
 const Chat = ({ user }) => {
   const { userName } = useParams();
-  let [friend] = user.friends.filter(
+  const friend = user.friends.find(
     (friend) => friend.name.toLowerCase() === userName.toLowerCase()
   );
-  console.log(friend);
-  // let messages = friend.dialog.map((message) => <Message />);
+  let messages = friend.dialog.map((message) => (
+    <Message friend={friend} message={message} />
+  ));
   return (
     <div
       className={s.chat}
@@ -19,7 +20,7 @@ const Chat = ({ user }) => {
         backgroundSize: "fill",
       }}
     >
-      <div className={`${s.chat_window}`}>hello</div>
+      <div className={`${s.chat_window}`}>{messages}</div>
       <div className={`${s.chat_input}`}>
         <Input />
       </div>

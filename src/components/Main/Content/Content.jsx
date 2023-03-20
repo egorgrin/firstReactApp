@@ -14,7 +14,7 @@ const Content = (props) => {
         />
         <Route
           path="/profile/*"
-          element={<Profile friends={props.state.user} />}
+          element={<Profile user={props.state.user} />}
         />
       </Routes>
     </section>

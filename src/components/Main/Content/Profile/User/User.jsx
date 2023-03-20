@@ -4,8 +4,8 @@ import ava from "../../../../../img/ava.png";
 import Feed from "./Feed/Feed.jsx";
 import FriendsWidgetItem from "./FriendsWiget/FriendsWidgetItem";
 
-const User = (props) => {
-  let friends = props.friends.map((friend) => (
+const User = ({ user }) => {
+  let userFriends = user.friends.map((friend) => (
     <FriendsWidgetItem userName={friend.name} key={friend.id} />
   ));
   return (
@@ -15,11 +15,11 @@ const User = (props) => {
           <img className={s.avatar} src={ava} alt="" />
           <div className={s.friends_widget_wrapper}>
             <h3 className={s.friends_widget_title}>
-              Friends {props.friends.length}
+              Friends {userFriends.length}
             </h3>
             <div className={s.friends_widget}>
-              {friends}
-              {friends}
+              {userFriends}
+              {userFriends}
             </div>
           </div>
         </div>
@@ -35,16 +35,16 @@ const User = (props) => {
           </div>
           <div className={`${s.text_data} ${s.text_data_right}`}>
             <p>
-              {props.firstName} {props.lastName}
+              {user.name} {user.lastName}
             </p>
-            <p>{props.dob}</p>
-            <p>Orenburg</p>
-            <p>Self-thought</p>
+            <p>{user.dob}</p>
+            <p>{user.origin}</p>
+            <p>{user.education}</p>
             <p>GitHub</p>
           </div>
 
           <div className={`${s.friends} ${s.stats_item}`}>
-            <span className={`${s.stats_count}`}>{props.friends.length}</span>
+            <span className={`${s.stats_count}`}>{userFriends.length}</span>
             <span className={`${s.stats_category}`}>friends</span>
           </div>
           <div className={`${s.followers} ${s.stats_item}`}>
