@@ -4,13 +4,13 @@ import Message from "./Message/Message.jsx";
 import cover from "../../../../../img/chatBg.svg";
 import { useParams } from "react-router-dom";
 
-const Chat = ({ user }) => {
+const Chat = ({ user, addMessage }) => {
   const { userName } = useParams();
   const friend = user.friends.find(
     (friend) => friend.name.toLowerCase() === userName.toLowerCase()
   );
   let messages = friend.dialog.map((message) => (
-    <Message friend={friend} message={message} key={message.id} />
+    <Message friend={friend} message={message} />
   ));
   return (
     <div
@@ -22,7 +22,7 @@ const Chat = ({ user }) => {
     >
       <div className={`${s.chat_window}`}>{messages}</div>
       <div className={`${s.chat_input}`}>
-        <Input />
+        <Input addMessage={addMessage} />
       </div>
     </div>
   );

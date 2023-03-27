@@ -43,8 +43,12 @@ a.dialogs_element:hover:not(.active), a.dialogs_element:focus:not(.active) {
 
 .last_message {
   font-size: 13px;
-  /*max-height: 13px;*/
   color: var(--blue-grey);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
 }
 
 .dialog_meta {

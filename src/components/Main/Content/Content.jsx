@@ -10,7 +10,9 @@ const Content = (props) => {
       <Routes>
         <Route
           path="/messages/*"
-          element={<Messages user={props.state.user} />}
+          element={
+            <Messages user={props.state.user} addMessage={props.addMessage} />
+          }
         />
         <Route
           path="/profile/*"

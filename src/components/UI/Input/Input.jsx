@@ -1,12 +1,13 @@
+import React from "react";
 import s from "./Input.module.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperclip, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
-function TextArea(props) {
+function Input(props) {
+  // Resize on large text prompt
   const [value, setValue] = useState("");
   const [height, setHeight] = useState("50px");
-
   const handleChange = (event) => {
     setValue(event.target.value);
     if (event.target.value === "") {
@@ -16,23 +17,30 @@ function TextArea(props) {
     }
   };
 
+  let textareaRef = React.createRef();
+  let addMessage = () => {
+    let value = textareaRef.current.value;
+    props.addMessage(value);
+    textareaRef.current.value = ``;
+    console.log(textareaRef.current.value);
+  };
+
   return (
     <div className={`${s.input} ${props.externalClass}`}>
       <button className={s.attachment}>
         <FontAwesomeIcon icon={faPaperclip} />
       </button>
       <textarea
-        className={s.textarea}
-        value={value}
+        ref={textareaRef}
         onChange={handleChange}
         style={{ height: height }}
         placeholder="Type your message..."
       />
-      <button className={s.send}>
+      <button className={s.send} onClick={addMessage}>
         <FontAwesomeIcon icon={faPaperPlane} />
       </button>
     </div>
   );
 }
 
-export default TextArea;
+export default Input;

@@ -8,10 +8,14 @@ import Meta from "../../../../UI/Meta/Meta";
 
 const Dialog_selector = ({ friend }) => {
   let path = `/messages/${friend.name.toLowerCase()}`;
-  let lastMessage = friend.dialog.at(-1).text.split(" ").slice(0, 10);
-  lastMessage[lastMessage.length - 1] = lastMessage[
+
+  let lastMessage = friend.dialog.at(-1).text.split(" ");
+
+  /*lastMessage[lastMessage.length - 1] = lastMessage[
     lastMessage.length - 1
-  ].replace(/[^ЁА-Яёа-я0-9]/g, "");
+  ].replace(/[^\w\s]/g, "");
+  console.log(lastMessage);*/
+
   return (
     <NavLink
       to={path}
@@ -31,7 +35,7 @@ const Dialog_selector = ({ friend }) => {
               <FontAwesomeIcon icon={faCheckDouble} />
             </div>
           </div>
-          <p className={s.last_message}>{lastMessage.join(` `)}...</p>
+          <p className={s.last_message}>{lastMessage.join(` `)}</p>
         </div>
       </div>
     </NavLink>
