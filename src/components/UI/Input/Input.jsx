@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperclip, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
-function Input(props) {
+function Input({addMessage}) {
   // Resize on large text prompt
   const [value, setValue] = useState("");
   const [height, setHeight] = useState("50px");
@@ -18,15 +18,13 @@ function Input(props) {
   };
 
   let textareaRef = React.createRef();
-  let addMessage = () => {
-    let value = textareaRef.current.value;
-    props.addMessage(value);
+  let send = () => {
+    addMessage(textareaRef.current.value);
     textareaRef.current.value = ``;
-    console.log(textareaRef.current.value);
   };
 
   return (
-    <div className={`${s.input} ${props.externalClass}`}>
+    <div className={`${s.input}`}>
       <button className={s.attachment}>
         <FontAwesomeIcon icon={faPaperclip} />
       </button>
@@ -36,7 +34,7 @@ function Input(props) {
         style={{ height: height }}
         placeholder="Type your message..."
       />
-      <button className={s.send} onClick={addMessage}>
+      <button className={s.send} onClick={send}>
         <FontAwesomeIcon icon={faPaperPlane} />
       </button>
     </div>
