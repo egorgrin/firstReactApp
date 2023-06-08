@@ -3,6 +3,8 @@
     background-color: var(--section-bg);
     flex-basis: 20%;
     flex-shrink: 0;
+
+    transition: flex-basis .5s ease;
 }
 
 nav {

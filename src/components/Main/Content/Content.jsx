@@ -11,7 +11,7 @@ const Content = (props) => {
         <Route
           path="/messages/*"
           element={
-            <Messages user={props.state.user} addMessage={props.addMessage} />
+            <Messages user={props.state.user} dispatch={props.dispatch} />
           }
         />
         <Route

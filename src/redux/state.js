@@ -130,7 +130,7 @@ let store = {
     return this._state;
   },
 
-  addMessage(value) {
+  _addMessage(value) {
     let vi = this._state.user.friends[0];
     let message = {
       id: vi.dialog[vi.dialog.length - 1].id + 1,
@@ -141,6 +141,15 @@ let store = {
     this._callSubscriber(this._state);
   },
 
+  dispatch(action) {
+    switch (action.type) {
+      case `add-message`:
+        this._addMessage(action.value);
+        break;
+      default:
+        console.log(`Что-то с dispatch`)
+    }
+  },
 };
 export default store;
 window.store = store;

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperclip, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
-function Input({addMessage}) {
+function Input({dispatch}) {
   // Resize on large text prompt
   const [value, setValue] = useState("");
   const [height, setHeight] = useState("50px");
@@ -19,7 +19,8 @@ function Input({addMessage}) {
 
   let textareaRef = React.createRef();
   let send = () => {
-    addMessage(textareaRef.current.value);
+    dispatch({type: `add-message`, value: textareaRef.current.value})
+    // addMessage(textareaRef.current.value);
     textareaRef.current.value = ``;
   };
 

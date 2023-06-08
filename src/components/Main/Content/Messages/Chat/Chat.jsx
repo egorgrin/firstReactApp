@@ -5,7 +5,7 @@ import cover from '../../../../../img/chatBg.svg';
 import {useParams} from 'react-router-dom';
 import {useEffect, useRef, useState} from 'react';
 
-const Chat = ({user, addMessage}) => {
+const Chat = ({user, dispatch}) => {
   const {userName} = useParams();
   const friend = user.friends.find(
       (friend) => friend.name.toLowerCase() === userName.toLowerCase(),
@@ -39,7 +39,7 @@ const Chat = ({user, addMessage}) => {
           {messages}
         </div>
         <div className={`${s.chat_input}`}>
-          <Input addMessage={addMessage}/>
+          <Input dispatch={dispatch}/>
         </div>
       </div>
   );

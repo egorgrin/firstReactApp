@@ -1,9 +1,9 @@
 // Import necessary dependencies
 import React from 'react'; // Import React library
 import ReactDOM from 'react-dom/client'; // Import ReactDOM library
-import './index.css'; // Import CSS file
-import App from './App'; // Import the App component
 import reportWebVitals from './reportWebVitals'; // Import web vitals reporting
+import App from './App'; // Import the App component
+import './index.css'; // Import CSS file
 import store from './redux/state'; // Import the Redux store
 
 // Create a root element for rendering the app
@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 let renderDOM = (state) => {
   // Render the App component with the state and the addMessage function from the store
   root.render(
-      <App state={state} addMessage={store.addMessage.bind(store)} />
+      <App state={state} dispatch={store.dispatch.bind(store)} />
   );
   /*root.render(
       <React.StrictMode>
