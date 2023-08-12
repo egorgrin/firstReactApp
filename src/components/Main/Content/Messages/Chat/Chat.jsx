@@ -12,15 +12,12 @@ const Chat = ({user, dispatch}) => {
   );
 
   /* Chat gpt scroll to bottom functional */
-
   const chatWindowRef = useRef(null);
   const [messageCount, setMessageCount] = useState(friend.dialog.length);
-
   useEffect(() => {
     chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
     setMessageCount(friend.dialog.length);
   }, [friend.dialog.length]);
-
   /*--------------------------------------*/
 
   let messages = friend.dialog.map((message) => (

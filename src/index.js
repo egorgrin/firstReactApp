@@ -1,10 +1,10 @@
 // Import necessary dependencies
-import React from 'react'; // Import React library
-import ReactDOM from 'react-dom/client'; // Import ReactDOM library
-import reportWebVitals from './reportWebVitals'; // Import web vitals reporting
-import App from './App'; // Import the App component
-import './index.css'; // Import CSS file
-import store from './redux/state'; // Import the Redux store
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import store from './redux/store';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
 // Create a root element for rendering the app
 const root = ReactDOM.createRoot(document.getElementById('root'));

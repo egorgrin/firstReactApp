@@ -1,3 +1,5 @@
+import dialogsReducer from './dialogs-reducer';
+
 let store = {
   _state: {
     user: {
@@ -123,33 +125,25 @@ let store = {
       ],
     },
   },
-  subscribe(observer) {
-    this._callSubscriber = observer;
-  },
+
+  /*------------------------------------*/
+
   get state() {
     return this._state;
   },
+  subscribe(observer) {
+    this._callSubscriber = observer;
+  },
 
-  _addMessage(value) {
-    let vi = this._state.user.friends[0];
-    let message = {
-      id: vi.dialog[vi.dialog.length - 1].id + 1,
-      senderId: 0,
-      text: value,
-    };
-    vi.dialog.push(message);
+  /*------------------------------------*/
+
+  dispatch(action) {
+    this._state.user.friends = dialogsReducer(this._state.user.friends, action);
     this._callSubscriber(this._state);
   },
 
-  dispatch(action) {
-    switch (action.type) {
-      case `add-message`:
-        this._addMessage(action.value);
-        break;
-      default:
-        console.log(`Что-то с dispatch`)
-    }
-  },
+  /*------------------------------------*/
+
 };
 export default store;
 window.store = store;

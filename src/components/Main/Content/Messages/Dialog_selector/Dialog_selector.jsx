@@ -2,7 +2,7 @@ import s from "./Dialog_selector.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckDouble } from "@fortawesome/free-solid-svg-icons";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ava from "../../../../../img/ava.png";
 import Meta from "../../../../UI/Meta/Meta";
 
