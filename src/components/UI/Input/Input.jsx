@@ -1,27 +1,30 @@
 import React from 'react';
 import s from './Input.module.css';
 import {useState} from 'react';
+
+
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPaperclip, faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 
-function Input({dispatch}) {
+function Input(props) {
+
   // Resize on large text prompt
   const [value, setValue] = useState('');
-  const [height, setHeight] = useState('50px');
+  const [height, setHeight] = useState(50);
   const handleChange = (event) => {
     setValue(event.target.value);
     if (event.target.value === '') {
-      setHeight('50px');
+      setHeight(50);
     } else {
       setHeight(Math.min(event.target.scrollHeight, 200));
     }
   };
   /*--------------------------*/
 
-
   let textareaRef = React.createRef();
-  let send = () => {
-    dispatch({type: `add-message`, textContent: textareaRef.current.value});
+  const sendMsg = () => {
+    const action = props.actionCreator(textareaRef.current.value);
+    props.dispatch(action);
     textareaRef.current.value = ``;
   };
 
@@ -38,7 +41,7 @@ function Input({dispatch}) {
             ref={textareaRef}
             placeholder="Type your message..."
         />
-        <button className={s.send} onClick={send}>
+        <button className={s.send} onClick={sendMsg}>
           <FontAwesomeIcon icon={faPaperPlane}/>
         </button>
       </div>

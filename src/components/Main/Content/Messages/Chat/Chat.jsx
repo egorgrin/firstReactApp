@@ -4,6 +4,8 @@ import Message from './Message/Message.jsx';
 import cover from '../../../../../img/chatBg.svg';
 import {useParams} from 'react-router-dom';
 import {useEffect, useRef, useState} from 'react';
+import {addMessageAC} from '../../../../../redux/dialogs-reducer';
+
 
 const Chat = ({user, dispatch}) => {
   const {userName} = useParams();
@@ -36,7 +38,7 @@ const Chat = ({user, dispatch}) => {
           {messages}
         </div>
         <div className={`${s.chat_input}`}>
-          <Input dispatch={dispatch}/>
+          <Input dispatch={dispatch} actionCreator={addMessageAC}/>
         </div>
       </div>
   );

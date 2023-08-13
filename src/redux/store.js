@@ -139,6 +139,7 @@ let store = {
 
   dispatch(action) {
     this._state.user.friends = dialogsReducer(this._state.user.friends, action);
+
     this._callSubscriber(this._state);
   },
 
