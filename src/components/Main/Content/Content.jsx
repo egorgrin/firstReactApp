@@ -11,7 +11,10 @@ const Content = (props) => {
         <Route
           path="/messages/*"
           element={
-            <Messages user={props.state.user} dispatch={props.dispatch} />
+            <Messages
+                friends={props.state.friends}
+                inputPrompt={props.state.inputPrompt}
+                dispatch={props.dispatch} />
           }
         />
         <Route

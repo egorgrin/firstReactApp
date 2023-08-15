@@ -1,8 +1,8 @@
-import dialogsReducer from './dialogs-reducer';
+import userReducer from './user-reducer';
 
 let store = {
   _state: {
-    user: {
+    /*user: {
       id: 0,
       name: `Egor`,
       lastName: `Gurinovich`,
@@ -123,7 +123,7 @@ let store = {
           ],
         },
       ],
-    },
+    },*/
   },
 
   /*------------------------------------*/
@@ -138,7 +138,7 @@ let store = {
   /*------------------------------------*/
 
   dispatch(action) {
-    this._state.user.friends = dialogsReducer(this._state.user.friends, action);
+    this._state.user.friends = userReducer(this._state.user.friends, action);
 
     this._callSubscriber(this._state);
   },
@@ -146,5 +146,3 @@ let store = {
   /*------------------------------------*/
 
 };
-export default store;
-window.store = store;

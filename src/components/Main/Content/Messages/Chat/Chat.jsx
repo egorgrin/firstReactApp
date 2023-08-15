@@ -4,12 +4,12 @@ import Message from './Message/Message.jsx';
 import cover from '../../../../../img/chatBg.svg';
 import {useParams} from 'react-router-dom';
 import {useEffect, useRef, useState} from 'react';
-import {addMessageAC} from '../../../../../redux/dialogs-reducer';
+import {addMessageAC} from '../../../../../redux/friends-reducer';
 
 
-const Chat = ({user, dispatch}) => {
+const Chat = ({friends, inputPrompt, dispatch}) => {
   const {userName} = useParams();
-  const friend = user.friends.find(
+  const friend = friends.find(
       (friend) => friend.name.toLowerCase() === userName.toLowerCase(),
   );
 
@@ -38,7 +38,7 @@ const Chat = ({user, dispatch}) => {
           {messages}
         </div>
         <div className={`${s.chat_input}`}>
-          <Input dispatch={dispatch} actionCreator={addMessageAC}/>
+          <Input dispatch={dispatch} actionCreator={addMessageAC} inputPrompt={inputPrompt} recipient={userName}/>
         </div>
       </div>
   );

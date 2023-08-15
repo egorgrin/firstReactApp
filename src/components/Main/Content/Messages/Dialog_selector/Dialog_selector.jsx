@@ -11,11 +11,6 @@ const Dialog_selector = ({ friend }) => {
 
   let lastMessage = friend.dialog.at(-1).text.split(" ");
 
-  /*lastMessage[lastMessage.length - 1] = lastMessage[
-    lastMessage.length - 1
-  ].replace(/[^\w\s]/g, "");
-  console.log(lastMessage);*/
-
   return (
     <NavLink
       to={path}
