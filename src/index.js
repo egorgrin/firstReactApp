@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import store from './redux/store';
+import store from './redux/redux-store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -23,10 +23,12 @@ let renderDOM = (state) => {
 };
 
 // Render the app with the initial state
-renderDOM(store.state);
+renderDOM(store.getState());
 
 // Subscribe to the store changes and re-render the app whenever the state changes
-store.subscribe(renderDOM);
+store.subscribe(() => {
+  renderDOM(store.getState());
+});
 
 // Measure performance in the app and report the results
 reportWebVitals();
