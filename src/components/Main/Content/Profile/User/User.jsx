@@ -4,8 +4,8 @@ import ava from "../../../../../img/ava.png";
 import Feed from "./Feed/Feed.jsx";
 import FriendsWidgetItem from "./FriendsWiget/FriendsWidgetItem";
 
-const User = ({ user }) => {
-  let userFriends = user.friends.map((friend) => (
+const User = ({ user, friends, userInput, dispatch }) => {
+  let userFriends = friends.map((friend) => (
     <FriendsWidgetItem userName={friend.name} key={friend.id} />
   ));
   return (
@@ -61,7 +61,10 @@ const User = ({ user }) => {
           </div>
         </div>
 
-        <Feed />
+        <Feed
+            userInput={userInput}
+            dispatch={dispatch}
+        />
       </div>
     </div>
   );

@@ -7,22 +7,15 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPaperclip, faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 import {updateInputAC} from '../../../redux/input-reducer';
 
-function Input({dispatch, actionCreator, recipient, inputPrompt}) {
+function Input({dispatch, actionCreator, recipientId, userInput}) {
 
   /* Resize on large text prompt */
-
-  // const [value, setValue] = useState('');
   const [height, setHeight] = useState(50);
   /*--------------------------*/
 
-  /*  const synchronizeInputContent =  (inputContent) => {
-      return null;
-    };*/
 
   const onChange = (event) => {
     /* Resize on large text prompt */
-
-    // setValue(event.target.value);
     if (event.target.value === '') {
       setHeight(50);
     } else {
@@ -35,8 +28,8 @@ function Input({dispatch, actionCreator, recipient, inputPrompt}) {
 
   let textareaRef = React.createRef();
 
-  const sendMsg = () => {
-    dispatch(actionCreator(recipient, inputPrompt));
+  const send = () => {
+    dispatch(actionCreator(userInput, recipientId));
     dispatch(updateInputAC(``));
     setHeight(50);
   };
@@ -51,9 +44,9 @@ function Input({dispatch, actionCreator, recipient, inputPrompt}) {
             ref={textareaRef}
             onChange={onChange}
             placeholder="Type your message..."
-            value={inputPrompt}
+            value={userInput}
         />
-        <button className={s.send} onClick={sendMsg}>
+        <button className={s.send} onClick={send}>
           <FontAwesomeIcon icon={faPaperPlane}/>
         </button>
       </div>

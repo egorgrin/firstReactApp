@@ -7,11 +7,12 @@ import {useEffect, useRef, useState} from 'react';
 import {addMessageAC} from '../../../../../redux/friends-reducer';
 
 
-const Chat = ({friends, inputPrompt, dispatch}) => {
+const Chat = ({friends, userInput, dispatch}) => {
   const {userName} = useParams();
   const friend = friends.find(
       (friend) => friend.name.toLowerCase() === userName.toLowerCase(),
   );
+
 
   /* Chat gpt scroll to bottom functional */
   const chatWindowRef = useRef(null);
@@ -38,7 +39,7 @@ const Chat = ({friends, inputPrompt, dispatch}) => {
           {messages}
         </div>
         <div className={`${s.chat_input}`}>
-          <Input dispatch={dispatch} actionCreator={addMessageAC} inputPrompt={inputPrompt} recipient={userName}/>
+          <Input dispatch={dispatch} actionCreator={addMessageAC} userInput={userInput} recipientId={friend.id}/>
         </div>
       </div>
   );

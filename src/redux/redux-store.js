@@ -7,7 +7,7 @@ import inputReducer from './input-reducer';
 let reducers = combineReducers({
   user: userReducer,
   friends: friendsReducer,
-  inputPrompt: inputReducer,
+  userInput: inputReducer,
 });
 
 let store = createStore(reducers);

@@ -3,7 +3,7 @@ import Dialog_selector from './Dialog_selector/Dialog_selector';
 import Chat from './Chat/Chat.jsx';
 import {Route, Routes} from 'react-router-dom';
 
-const Messages = ({friends, inputPrompt, dispatch}) => {
+const Messages = ({friends, userInput, dispatch}) => {
 
   let dialogSelectors = friends.map((friend) => (
       <Dialog_selector friend={friend} key={friend.id}/>
@@ -17,7 +17,7 @@ const Messages = ({friends, inputPrompt, dispatch}) => {
           <Route
               path="/:userName"
               element={
-                <Chat friends={friends} inputPrompt={inputPrompt} dispatch={dispatch}/>
+                <Chat friends={friends} userInput={userInput} dispatch={dispatch}/>
               }
           />
         </Routes>

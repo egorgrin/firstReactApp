@@ -2,7 +2,7 @@ const ADD_MESSAGE = `add-message`;
 
 let initialState = [
   {
-    id: 1,
+    id: 0,
     name: `Vi`,
     dialog: [
       {id: 0, senderId: 0, text: 'Привет, как дела?'},
@@ -55,7 +55,7 @@ let initialState = [
     ],
   },
   {
-    id: 2,
+    id: 1,
     name: `Jackie`,
     dialog: [
       {id: 0, text: 'Привет, как дела?'},
@@ -99,7 +99,7 @@ let initialState = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     name: `Johnny`,
     dialog: [
       {id: 0, text: 'Привет, Алекс!'},
@@ -115,14 +115,20 @@ let initialState = [
   },
 ];
 
+export const addMessageAC = (userInput, recipientId) => ({
+  type: ADD_MESSAGE,
+  userInput,
+  recipientId,
+});
+
 const friendsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_MESSAGE:
-      let recipient = state.find(friend => friend.name.toLowerCase() === action.recipient.toLowerCase());
+      let recipient = state.find(friend => friend.id === action.recipientId);
       let message = {
         id: recipient.dialog[recipient.dialog.length - 1].id + 1,
-        senderId: 0,
-        text: action.textContent,
+        senderId: action.recipientId,
+        text: action.userInput,
       };
       recipient.dialog.push(message);
       return state;
@@ -130,11 +136,5 @@ const friendsReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-export const addMessageAC = (recipient, textContent) => ({
-  type: ADD_MESSAGE,
-  recipient,
-  textContent,
-});
 
 export default friendsReducer;

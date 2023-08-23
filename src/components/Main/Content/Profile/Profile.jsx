@@ -1,10 +1,14 @@
 import s from "./Profile.module.css";
 import User from "./User/User.jsx";
 
-const Profile = ({ user }) => {
+const Profile = (props) => {
   return (
     <div className={s.wrapper}>
-      <User user={user} />
+      <User
+          user={props.user}
+          friends={props.friends}
+          userInput={props.userInput}
+          dispatch={props.dispatch} />
     </div>
   );
 };
