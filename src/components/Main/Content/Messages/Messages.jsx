@@ -1,7 +1,7 @@
 import s from './Messages.module.css';
 import Dialog_selector from './Dialog_selector/Dialog_selector';
-import Chat from './Chat/Chat.jsx';
 import {Route, Routes} from 'react-router-dom';
+import ChatContainer from './Chat/ChatContainer';
 
 const Messages = ({friends, userInput, dispatch}) => {
 
@@ -17,7 +17,7 @@ const Messages = ({friends, userInput, dispatch}) => {
           <Route
               path="/:userName"
               element={
-                <Chat friends={friends} userInput={userInput} dispatch={dispatch}/>
+                <ChatContainer friends={friends} userInput={userInput} dispatch={dispatch}/>
               }
           />
         </Routes>
