@@ -127,7 +127,7 @@ const friendsReducer = (state = initialState, action) => {
       let recipient = state.find(friend => friend.id === action.recipientId);
       let message = {
         id: recipient.dialog[recipient.dialog.length - 1].id + 1,
-        senderId: action.recipientId,
+        senderId: 0,
         text: action.userInput,
       };
       recipient.dialog.push(message);

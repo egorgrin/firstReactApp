@@ -5,6 +5,7 @@ import './index.css';
 import store from './redux/redux-store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import StoreContext from './store-context';
 
 // Create a root element for rendering the app
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,7 +14,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 let renderDOM = (state) => {
   // Render the App component with the state and the addMessage function from the store
   root.render(
-      <App state={state} dispatch={store.dispatch.bind(store)} />
+      <StoreContext.Provider value={store}>
+        <App state={state} dispatch={store.dispatch.bind(store)}/>
+      </StoreContext.Provider>,
   );
   /*root.render(
       <React.StrictMode>
