@@ -1,8 +1,8 @@
 import s from './Content.module.css';
 
-import Messages from './Messages/Messages.jsx';
 import Profile from './Profile/Profile.jsx';
 import {Route, Routes} from 'react-router-dom';
+import MessagesContainer from './Messages/MessagesContainer';
 
 const Content = (props) => {
   return (
@@ -11,22 +11,13 @@ const Content = (props) => {
           <Route
               path="/messages/*"
               element={
-                <Messages
-                    friends={props.state.friends}
-
-                    userInput={props.state.userInput}
-                    dispatch={props.dispatch}/>
+                <MessagesContainer />
               }
           />
           <Route
               path="/profile/*"
               element={
-                <Profile
-                    user={props.state.user}
-                    friends={props.state.friends}
-
-                    userInput={props.state.userInput}
-                    dispatch={props.dispatch}/>}
+                <Profile />}
           />
         </Routes>
       </section>

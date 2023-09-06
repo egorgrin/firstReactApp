@@ -1,10 +1,34 @@
 import s from './Chat.module.css';
 import cover from '../../../../../img/chatBg.svg';
-import {addMessageAC} from '../../../../../redux/friends-reducer';
 import InputContainer from '../../../../UI/Input/InputContainer';
+import Message from './Message/Message';
+import {useParams} from 'react-router-dom';
+import {useEffect, useRef, useState} from 'react';
 
 
-const Chat = ({ messages, friend, userInput, dispatch, chatWindowRef}) => {
+const Chat = ({ friends }) => {
+
+  // Takes url parameter from useParams() that contains userName from Messages component
+  const {userName} = useParams();
+  const friend = friends.find(
+      (friend) => friend.name.toLowerCase() === userName.toLowerCase(),
+  );
+
+  console.log(userName);
+
+  let messages = friend.dialog.map((message) => (
+      <Message key={message.id} friend={friend} message={message}/>
+  ));
+
+  /* ChatGPT scroll to bottom functional */
+  const chatWindowRef = useRef(null);
+  const [messageCount, setMessageCount] = useState(friend.dialog.length);
+  useEffect(() => {
+    chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
+    setMessageCount(friend.dialog.length);
+  }, [friend.dialog.length]);
+  /*--------------------------------------*/
+
   return (
       <div
           className={s.chat}
@@ -17,13 +41,7 @@ const Chat = ({ messages, friend, userInput, dispatch, chatWindowRef}) => {
           {messages}
         </div>
         <div className={`${s.chat_input}`}>
-          <InputContainer
-              actionCreator={addMessageAC}
-              recipientId={friend.id}
-
-              userInput={userInput}
-              dispatch={dispatch}
-          />
+          <InputContainer />
         </div>
       </div>
   );

@@ -1,12 +1,12 @@
 import s from './Messages.module.css';
-import Dialog_selector from './Dialog_selector/Dialog_selector';
+import DialogSelector from './Dialog_selector/Dialog-selector';
 import {Route, Routes} from 'react-router-dom';
 import ChatContainer from './Chat/ChatContainer';
 
-const Messages = ({friends, userInput, dispatch}) => {
+const Messages = ({friends}) => {
 
   let dialogSelectors = friends.map((friend) => (
-      <Dialog_selector friend={friend} key={friend.id}/>
+      <DialogSelector friend={friend} key={friend.id}/>
   ));
   return (
       <div className={s.wrapper}>
@@ -17,7 +17,7 @@ const Messages = ({friends, userInput, dispatch}) => {
           <Route
               path="/:userName"
               element={
-                <ChatContainer friends={friends} userInput={userInput} dispatch={dispatch}/>
+                <ChatContainer />
               }
           />
         </Routes>

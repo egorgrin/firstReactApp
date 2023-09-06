@@ -5,6 +5,7 @@ let initialState = ``;
 const inputReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_INPUT:
+      // console.log(action.prompt);
       state = action.prompt;
       return state;
     default:

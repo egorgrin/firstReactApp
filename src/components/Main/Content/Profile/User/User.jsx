@@ -4,7 +4,7 @@ import ava from "../../../../../img/ava.png";
 import Feed from "./Feed/Feed.jsx";
 import FriendsWidgetItem from "./FriendsWiget/FriendsWidgetItem";
 
-const User = ({ user, friends, userInput, dispatch }) => {
+const User = ({ user, friends }) => {
   let userFriends = friends.map((friend) => (
     <FriendsWidgetItem userName={friend.name} key={friend.id} />
   ));
@@ -61,10 +61,7 @@ const User = ({ user, friends, userInput, dispatch }) => {
           </div>
         </div>
 
-        <Feed
-            userInput={userInput}
-            dispatch={dispatch}
-        />
+        <Feed />
       </div>
     </div>
   );

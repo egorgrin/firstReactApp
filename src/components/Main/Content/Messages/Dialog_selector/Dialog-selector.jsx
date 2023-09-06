@@ -1,4 +1,4 @@
-import s from './Dialog_selector.module.css';
+import s from './Dialog-selector.module.css';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCheckDouble} from '@fortawesome/free-solid-svg-icons';
@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom';
 import ava from '../../../../../img/ava.png';
 import Meta from '../../../../UI/Meta/Meta';
 
-const Dialog_selector = ({friend}) => {
+const DialogSelector = ({friend}) => {
   let path = `/messages/${friend.name.toLowerCase()}`;
 
   let lastMessage = friend.dialog.at(-1).text.split(' ');
@@ -37,4 +37,4 @@ const Dialog_selector = ({friend}) => {
   );
 };
 
-export default Dialog_selector;
+export default DialogSelector;

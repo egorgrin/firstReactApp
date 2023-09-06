@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from './Input.module.css';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPaperclip, faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 
-const Input = ({ onChange, send, userInput, height }) => {
-  let textareaRef = React.createRef();
+const Input = ({ userInput, send, handleChange }) => {
 
+  let textareaRef = React.createRef();
 
   return (
       <div className={`${s.input}`}>
@@ -14,9 +14,9 @@ const Input = ({ onChange, send, userInput, height }) => {
           <FontAwesomeIcon icon={faPaperclip}/>
         </button>
         <textarea
-            style={{height: height}}
+            // style={{height: height}}
             ref={textareaRef}
-            onChange={onChange}
+            onChange={handleChange}
             placeholder="Type your message..."
             value={userInput}
         />
