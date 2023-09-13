@@ -18,7 +18,7 @@
 
 .sliding_inner {
   padding: 2rem 0;
-  position: sticky;
+  /*position: sticky;*/
   top: 0;
   display: flex;
   align-items: center;
