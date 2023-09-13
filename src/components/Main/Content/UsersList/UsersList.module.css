@@ -1,0 +1,8 @@
+.wrapper {
+  width: 100%;
+  overflow: auto;
+}
+
+.list a:not(:last-child) > div {
+  margin-bottom: var(--module-gap);
+}
