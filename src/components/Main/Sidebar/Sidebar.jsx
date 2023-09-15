@@ -2,7 +2,7 @@ import s from "./Sidebar.module.css";
 import { NavLink } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGear, faEnvelope, faUser, faNewspaper, faMusic, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { faGear, faEnvelope, faUser, faNewspaper, faMusic, faUserGroup, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = () => {
   return (
@@ -44,6 +44,19 @@ const Sidebar = () => {
                 <FontAwesomeIcon icon={faUserGroup} />
               </div>
               <div className={s.text}>Friends</div>
+            </div>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+              className={(navData) => (navData.isActive ? `${s.active}` : "")}
+              to="/users"
+          >
+            <div className={s.item}>
+              <div className={s.icon}>
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </div>
+              <div className={s.text}>Find User</div>
             </div>
           </NavLink>
         </li>

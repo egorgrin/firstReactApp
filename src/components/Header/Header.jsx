@@ -1,7 +1,7 @@
 import s from "./Header.module.css";
 // import logo from '../../img/logo.svg';
-import logoBg from "../../img/logo_bg.png";
-import logoFace from "../../img/logo__face.png";
+import logoBg from "../../assets/img/logo_bg.png";
+import logoFace from "../../assets/img/logo__face.png";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {

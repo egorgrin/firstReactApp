@@ -4,14 +4,14 @@ import {Route, Routes} from 'react-router-dom';
 import ChatContainer from './Chat/ChatContainer';
 
 const Messages = ({friends}) => {
-
-  let dialogSelectors = friends.map((friend) => (
-      <DialogSelector friend={friend} key={friend.id}/>
-  ));
   return (
       <div className={s.wrapper}>
         <div className={s.dialogs_list}>
-          {dialogSelectors}
+          {
+            friends.map((friend) => (
+                <DialogSelector friend={friend} key={friend.id}/>
+            ))
+          }
         </div>
         <Routes>
           <Route

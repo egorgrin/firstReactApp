@@ -40,6 +40,12 @@ nav a.active {
     gap: 1rem
 }
 
+.icon {
+    min-width: 25px;
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 992px) {
     nav a {
         padding: 1rem;

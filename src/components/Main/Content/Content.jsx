@@ -4,6 +4,7 @@ import Profile from './Profile/Profile.jsx';
 import {Route, Routes} from 'react-router-dom';
 import MessagesContainer from './Messages/MessagesContainer';
 import FriendsListContainer from './FriendsList/FriendsListContainer';
+import UsersListContainer from './UsersList/UsersListContainer';
 
 const Content = () => {
   return (
@@ -25,6 +26,12 @@ const Content = () => {
               path="/friends/*"
               element={
                 <FriendsListContainer />
+              }
+          />
+          <Route
+              path="/users/*"
+              element={
+                <UsersListContainer />
               }
           />
         </Routes>

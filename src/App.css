@@ -9,8 +9,6 @@
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -74,16 +72,16 @@ img {
   vertical-align: top;
 }
 
-/* ------------ */
+/* =================== */
 
 
 :root {
 
   /* Colour variables*/
 
-  --grey: #949494;
   --pink: #A450A8;
   --blue-white: #E4EDF2;
+  --grey: #949494;
   --blue-grey: #91A3B5;
   --blue-bright: #2697D6;
   --tg-blue: #2B5378;
@@ -105,6 +103,7 @@ img {
   flex-direction: column;
   max-width: 1280px;
   margin: 0 auto;
+  padding: var(--module-gap) var(--module-gap) var(--module-gap) var(--module-gap);
   height: 100vh;
   color: var(--blue-white);
 }

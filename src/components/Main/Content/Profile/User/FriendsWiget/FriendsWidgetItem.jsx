@@ -1,5 +1,5 @@
 import s from "./FriendsWidgetItem.module.css";
-import ava from "../../../../../../img/ava.png";
+import ava from "../../../../../../assets/img/ava.png";
 
 const FriendsWidgetItem = (props) => {
   return (

@@ -1,5 +1,5 @@
 import s from './Chat.module.css';
-import cover from '../../../../../img/chatBg.svg';
+import cover from '../../../../../assets/img/chatBg.svg';
 import InputContainer from '../../../../UI/Input/InputContainer';
 import Message from './Message/Message';
 import {useParams} from 'react-router-dom';

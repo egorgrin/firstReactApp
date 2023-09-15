@@ -1,5 +1,5 @@
 import s from "./User.module.css";
-import ava from "../../../../../img/ava.png";
+import ava from "../../../../../assets/img/ava.png";
 
 import Feed from "./Feed/Feed.jsx";
 import FriendsWidgetItem from "./FriendsWiget/FriendsWidgetItem";
