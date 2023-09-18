@@ -152,7 +152,7 @@ export const addMessageAC = (userInput, recipientId) => ({
   recipientId,
 });
 
-const friendsReducer = (state = initialState, action) => {
+const friends = (state = initialState, action) => {
   switch (action.type) {
     case ADD_MESSAGE:
       let recipient = state.find(friend => friend.id === action.recipientId);
@@ -168,4 +168,4 @@ const friendsReducer = (state = initialState, action) => {
   }
 };
 
-export default friendsReducer;
+export default friends;

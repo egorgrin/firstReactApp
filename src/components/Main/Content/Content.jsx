@@ -5,6 +5,7 @@ import {Route, Routes} from 'react-router-dom';
 import MessagesContainer from './Messages/MessagesContainer';
 import FriendsListContainer from './FriendsList/FriendsListContainer';
 import UsersListContainer from './UsersList/UsersListContainer';
+import UsersConstructor from './UserConstructor/UserContructor';
 
 const Content = () => {
   return (

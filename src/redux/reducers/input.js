@@ -2,7 +2,7 @@ const UPDATE_INPUT = `update-content`;
 
 let initialState = ``;
 
-const inputReducer = (state = initialState, action) => {
+const input = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_INPUT:
       // console.log(action.prompt);
@@ -18,4 +18,4 @@ export const updateInputAC = (prompt) => ({
   prompt,
 });
 
-export default inputReducer;
+export default input;

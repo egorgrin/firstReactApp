@@ -7,6 +7,6 @@ let initialState = {
   education: `Self-thought`,
 }
 
-const userReducer = (state = initialState, action) => state;
+const user = (state = initialState, action) => state;
 
-export default userReducer;
+export default user;

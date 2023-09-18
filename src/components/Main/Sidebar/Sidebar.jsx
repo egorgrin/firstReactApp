@@ -88,8 +88,8 @@ const Sidebar = () => {
         </li>
         <li>
           <NavLink
-            className={(navData) => (navData.isActive ? `${s.active}` : "")}
-            to="/settings"
+              className={(navData) => (navData.isActive ? `${s.active}` : "")}
+              to="/settings"
           >
             <div className={s.item}>
               <div className={s.icon}>

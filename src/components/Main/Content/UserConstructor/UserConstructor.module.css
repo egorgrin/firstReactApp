@@ -1,0 +1,59 @@
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.form, .field_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  background-color: var(--section-bg);
+  padding: 2rem;
+}
+
+.fields {
+  max-width: 600px;
+  width: 100%;
+}
+
+.field_block:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.label {
+  margin-bottom: 1rem;
+}
+
+.input {
+  height: 2rem;
+  padding: 0 .5rem;
+}
+
+.checkbox {
+  margin-left: 1rem;
+}
+
+.btn {
+  text-align: center;
+}
+
+.send {
+  padding: 1rem;
+  font-size: 20px;
+  background-color: var(--section-bg);
+  color: #8E8E8E;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 // import {useState} from 'react';
-import {updateInputAC} from '../../../redux/input-reducer';
+import {updateInputAC} from '../../../redux/reducers/input';
 import Input from './Input';
 import {connect} from 'react-redux';
 
