@@ -26,7 +26,7 @@
 }
 
 .avatar {
-  width: 200px;
+  max-width: 200px;
   margin-bottom: 3rem;
 }
 
@@ -41,7 +41,6 @@
 .friends_widget {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
 }
 
 /* Main styles */
@@ -61,6 +60,10 @@
   justify-items: center;
   background-color: var(--section-bg);
   padding: 2rem;
+}
+
+.avatar_mobile {
+  display: none;
 }
 
 .text_data {
@@ -97,3 +100,29 @@
   margin-bottom: 5px;
 }
 
+@media (max-width: 991px) {
+  .aside {
+    display: none;
+  }
+
+  .text_data_left {
+    display: none;
+  }
+
+  .avatar_mobile {
+    display: block;
+    align-self: center;
+    max-width: 150px;
+    grid-column: span 2 / 3;
+  }
+
+  .text_data_right {
+    grid-column: span 1 / 4;
+  }
+}
+
+@media (max-width: 767px) {
+  .text_data_right {
+    grid-column: span 2 / 5;
+  }
+}

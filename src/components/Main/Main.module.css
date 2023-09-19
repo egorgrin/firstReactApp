@@ -4,3 +4,12 @@
     flex-grow: 1;
     overflow: hidden;
 }
+
+@media (max-width: 767px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: var(--module-gap);
+  }
+}

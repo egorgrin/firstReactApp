@@ -27,6 +27,7 @@ const User = ({user, friends}) => {
         </div>
         <div className={s.main}>
           <div className={s.data}>
+            <img className={s.avatar_mobile} src={ava} alt=""/>
             <div className={`${s.text_data} ${s.text_data_left}`}>
               <p>Name:</p>
               <p>Date of Birth:</p>
