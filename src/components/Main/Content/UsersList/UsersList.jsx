@@ -11,7 +11,7 @@ const UsersList = ({users}) => {
     dispatch(getUsers());
   }, [dispatch]);
 
-  console.log(users);
+  // console.log(users);
 
   return (
       <div className={s.wrapper}>

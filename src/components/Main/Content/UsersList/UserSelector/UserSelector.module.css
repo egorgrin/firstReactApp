@@ -3,14 +3,21 @@
   padding: .4rem .7rem;
   gap: .7rem;
   align-items: center;
-  cursor: pointer;
   width: 100%;
   min-height: 100px;
   background-color: var(--section-bg);
 }
 
-.list_element:hover, .list_element:focus {
+/*.list_element:hover:not(.active), .list_element:focus:not(.active) {
   background-color: var(--blue-hover);
+}*/
+
+.list_element a, .action {
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--tg-blue);
 }
 
 .avatar {

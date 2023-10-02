@@ -13,9 +13,11 @@ const UserSelector = ({user}) => {
         </NavLink>
         <div className={s.data}>
           <div className={s.data_top_row}>
-            <div className={s.user_name}>
-              {user.firstName ? user.firstName : 'Name'}
-            </div>
+            <NavLink to={`/`}>
+              <div className={s.user_name}>
+                {user.firstName ? user.firstName : 'Name'}
+              </div>
+            </NavLink>
             <div className={s.action}>
               {/*<FontAwesomeIcon icon={faEllipsis} />*/}
               Follow

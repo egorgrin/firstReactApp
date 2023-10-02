@@ -1,10 +1,9 @@
-import s from "./Sidebar.module.css";
+import s from "./Nav.module.css";
 import { NavLink } from "react-router-dom";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faEnvelope, faUser, faNewspaper, faMusic, faUserGroup, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const Sidebar = () => {
+const Nav = () => {
   return (
     <aside className={s.wrapper}>
       <nav>
@@ -104,4 +103,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Nav;
