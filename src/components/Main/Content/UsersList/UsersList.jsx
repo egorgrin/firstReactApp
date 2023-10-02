@@ -11,12 +11,14 @@ const UsersList = ({users}) => {
     dispatch(getUsers())
   }, [dispatch])
 
+  console.log(users);
+
   return (
       <div className={s.wrapper}>
         <div className={s.list}>
           {
             users.map(user => (
-              <UserSelector user={user} key={user.id}/>
+              <UserSelector user={user} key={user._id}/>
           ))
           }
         </div>

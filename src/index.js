@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <Provider store={store}>
-      <App state={store.getState()} dispatch={store.dispatch.bind(store)}/>
+      <App />
     </Provider>,
 );
 
