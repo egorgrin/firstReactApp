@@ -4,6 +4,6 @@
   overflow: auto;
 }
 
-.list a:not(:last-child) > div {
+.list > div:not(:last-child) {
   margin-bottom: var(--module-gap);
 }

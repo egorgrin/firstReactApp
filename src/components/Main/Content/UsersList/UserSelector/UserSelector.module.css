@@ -9,12 +9,8 @@
   background-color: var(--section-bg);
 }
 
-a.list_element:hover:not(.active), a.list_element:focus:not(.active) {
+.list_element:hover, .list_element:focus {
   background-color: var(--blue-hover);
-}
-
-.active {
-  background-color: var(--tg-blue);
 }
 
 .avatar {

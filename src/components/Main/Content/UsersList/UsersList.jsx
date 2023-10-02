@@ -8,8 +8,8 @@ const UsersList = ({users}) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getUsers())
-  }, [dispatch])
+    dispatch(getUsers());
+  }, [dispatch]);
 
   console.log(users);
 
@@ -18,12 +18,12 @@ const UsersList = ({users}) => {
         <div className={s.list}>
           {
             users.map(user => (
-              <UserSelector user={user} key={user._id}/>
-          ))
+                <UserSelector user={user} key={user._id}/>
+            ))
           }
         </div>
       </div>
   );
-}
+};
 
-export default UsersList
+export default UsersList;

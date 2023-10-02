@@ -31,27 +31,6 @@ const Post = (props) => {
             <div className={s.main_img_wrapper}>
               <img className={``} src={p400} alt="" />
             </div>
-            <div className={s.img_gallery}>
-              <div className={s.img_gallery_item}>
-                <img className={``} src={p400} alt="" />
-              </div>
-              <div className={s.img_gallery_item}>
-                <img className={``} src={p200} alt="" />
-              </div>
-              <div className={s.img_gallery_item}>
-                <img className={``} src={p400} alt="" />
-              </div>
-              <div className={s.img_gallery_item}>
-                <img
-                  className={``}
-                  src={`https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80`}
-                  alt=""
-                />
-              </div>
-              <div className={s.img_gallery_item}>
-                <img className={``} src={p400} alt="" />
-              </div>
-            </div>
           </div>
         </div>
       </div>
