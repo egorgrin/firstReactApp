@@ -1,4 +1,4 @@
-import user from './reducers/user';
+import currentUser from './reducers/currentUser';
 
 let old_store = {
   _state: {
@@ -138,7 +138,7 @@ let old_store = {
   /*------------------------------------*/
 
   dispatch(action) {
-    this._state.user.friends = user(this._state.user.friends, action);
+    this._state.user.friends = currentUser(this._state.user.friends, action);
 
     this._callSubscriber(this._state);
   },

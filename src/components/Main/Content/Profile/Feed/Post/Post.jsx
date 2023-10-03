@@ -1,10 +1,10 @@
 import s from "./Post.module.css";
 import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ava from "../../../../../../../assets/img/ava.png";
-import p200 from "../../../../../../../assets/img/p200.webp";
-import p400 from "../../../../../../../assets/img/p400.webp";
-import Meta from "../../../../../../UI/Meta/Meta";
+import ava from "../../../../../../assets/img/ava.png";
+import p200 from "../../../../../../assets/img/p200.webp";
+import p400 from "../../../../../../assets/img/p400.webp";
+import Meta from "../../../../../UI/Meta/Meta";
 
 const Post = (props) => {
   return (

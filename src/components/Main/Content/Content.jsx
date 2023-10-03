@@ -1,11 +1,11 @@
 import s from './Content.module.css';
 
-import Profile from './Profile/Profile.jsx';
 import {Route, Routes} from 'react-router-dom';
 import MessagesContainer from './Messages/MessagesContainer';
 import FriendsListContainer from './FriendsList/FriendsListContainer';
 import UsersListContainer from './UsersList/UsersListContainer';
 import UsersConstructor from './UserConstructor/UserContructor';
+import ProfileContainer from './Profile/ProfileContainer';
 
 const Content = () => {
   return (
@@ -14,7 +14,7 @@ const Content = () => {
           <Route
               path="/profile/*"
               element={
-                <Profile />
+                <ProfileContainer />
               }
           />
           <Route

@@ -4,10 +4,10 @@ import {useDispatch} from 'react-redux';
 import {useEffect} from 'react';
 import {getUsers} from '../../../../redux/actions/users';
 
-const UsersList = ({users, user}) => {
+const UsersList = ({users, currentUser}) => {
   const dispatch = useDispatch();
 
-  let me = user;
+  let me = currentUser;
 
   useEffect(() => {
     dispatch(getUsers());
