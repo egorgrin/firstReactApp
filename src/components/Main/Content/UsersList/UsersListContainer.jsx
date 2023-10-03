@@ -3,8 +3,8 @@ import UsersList from './UsersList';
 
 const mapStateToProps = (state) => {
     return {
-        friends: state.friends,
         users: state.users,
+        user: state.user,
     };
 };
 

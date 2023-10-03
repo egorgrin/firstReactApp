@@ -4,6 +4,7 @@ const url = 'http://localhost:5000/users';
 
 export const fetchUsers = () => axios.get(url);
 
+/*
 export const createUser = (newUser) => {
   axios.post(url, newUser)
       .then((response) => {
@@ -11,4 +12,4 @@ export const createUser = (newUser) => {
       }).catch((error) => {
     console.error('Произошла ошибка при создании пользователя:', error);
   });
-};
+};*/

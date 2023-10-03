@@ -18,7 +18,7 @@ const User = ({user, friends}) => {
                 {
                   friends.map((friend) => (
                           <FriendsWidgetItem userName={friend.name} key={friend.id}/>
-                      ),
+                      )
                   )
                 }
               </div>

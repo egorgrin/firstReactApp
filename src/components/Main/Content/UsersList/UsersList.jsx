@@ -4,21 +4,22 @@ import {useDispatch} from 'react-redux';
 import {useEffect} from 'react';
 import {getUsers} from '../../../../redux/actions/users';
 
-const UsersList = ({users}) => {
+const UsersList = ({users, user}) => {
   const dispatch = useDispatch();
+
+  let me = user;
 
   useEffect(() => {
     dispatch(getUsers());
   }, [dispatch]);
 
-  // console.log(users);
 
   return (
       <div className={s.wrapper}>
         <div className={s.list}>
           {
             users.map(user => (
-                <UserSelector user={user} key={user._id}/>
+                <UserSelector me={me} user={user} key={user.id}/>
             ))
           }
         </div>

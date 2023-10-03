@@ -5,7 +5,7 @@ import s from './UserConstructor.module.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import {createUser} from '../../../../redux/actions/users';
+// import {createUser} from '../../../../redux/actions/users';
 
 const UsersConstructor = () => {
   const [userData, setUserData] = useState({

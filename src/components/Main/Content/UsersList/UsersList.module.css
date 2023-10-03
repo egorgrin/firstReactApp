@@ -7,3 +7,16 @@
 .list > div:not(:last-child) {
   margin-bottom: var(--module-gap);
 }
+
+.wrapper::-webkit-scrollbar {
+  width: 12px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background-color: var(--section-bg);
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--bg);
+  border: 3px solid var(--section-bg);;
+}

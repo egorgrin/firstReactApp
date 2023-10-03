@@ -3,7 +3,10 @@ import {NavLink} from 'react-router-dom';
 import ava from '../../../../../assets/img/ava.png';
 import {logDOM} from '@testing-library/react';
 
-const UserSelector = ({user}) => {
+const UserSelector = ({user, me}) => {
+
+  let isFriend = user.friends.includes(me.id);
+
   return (
       <div className={s.list_element}>
         <NavLink to={`/`}>
@@ -18,10 +21,9 @@ const UserSelector = ({user}) => {
                 {user.firstName ? user.firstName : 'Name'}
               </div>
             </NavLink>
-            <div className={s.action}>
-              {/*<FontAwesomeIcon icon={faEllipsis} />*/}
-              Follow
-            </div>
+            {isFriend
+                ? <div className={s.action}>Unfollow</div>
+                : <div className={s.action}>Follow</div>}
           </div>
           <p className={s.status}>
             {user.country ? user.country : 'Country'}
