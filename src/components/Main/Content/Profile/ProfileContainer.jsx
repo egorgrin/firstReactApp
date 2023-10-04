@@ -1,15 +1,14 @@
 import React from 'react';
-
-import {connect} from 'react-redux';
-import Profile from './Profile';
+import withRouter from '../../../../api/WithRouter';
 import axios from 'axios';
-import {updateCurrentUser} from '../../../../redux/reducers/currentUser';
+import {connect} from 'react-redux';
 
-let currentUserId = `ln92211akDPPc3`;
+import Profile from './Profile';
+import {updateCurrentUser} from '../../../../redux/reducers/currentUser';
 
 class ProfileContainer extends React.Component {
   componentDidMount() {
-    axios.get(`http://localhost:5000/users/${currentUserId}`)
+        axios.get(`http://localhost:5000/users/${this.props.params.userId}`)
         .then((response) => {
           this.props.updateCurrentUser(response.data);
         });
@@ -23,9 +22,9 @@ class ProfileContainer extends React.Component {
 const mapStateToProps = (state) => {
   return {
     users: state.users,
-    currentUser: state.currentUser,
+    user: state.currentUser,
     friends: state.friends,
   };
 };
 
-export default connect(mapStateToProps, {updateCurrentUser})(ProfileContainer);
+export default connect(mapStateToProps, {updateCurrentUser})(withRouter(ProfileContainer));

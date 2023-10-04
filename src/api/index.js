@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-export const fetchUsers = () => axios.get('http://localhost:5000/users', { params: { get: 5 } });
+export const fetchUsers = () => axios.get('http://localhost:5000/users');
+
+export const fetchFriends = () => axios.get('http://localhost:5000/friends');
 
 /*
 export const createUser = (newUser) => {

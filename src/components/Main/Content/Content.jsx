@@ -2,17 +2,17 @@ import s from './Content.module.css';
 
 import {Route, Routes} from 'react-router-dom';
 import MessagesContainer from './Messages/MessagesContainer';
-import FriendsListContainer from './FriendsList/FriendsListContainer';
-import UsersListContainer from './UsersList/UsersListContainer';
+import UsersContainer from './Users/UsersContainer';
 import UsersConstructor from './UserConstructor/UserContructor';
 import ProfileContainer from './Profile/ProfileContainer';
+import FriendsContainer from './Users/Friends/FriendsContainer';
 
 const Content = () => {
   return (
       <section className={s.wrapper}>
         <Routes>
           <Route
-              path="/profile/*"
+              path="/profile/:userId"
               element={
                 <ProfileContainer />
               }
@@ -26,13 +26,13 @@ const Content = () => {
           <Route
               path="/friends/*"
               element={
-                <FriendsListContainer />
+                <FriendsContainer />
               }
           />
           <Route
               path="/users/*"
               element={
-                <UsersListContainer />
+                <UsersContainer />
               }
           />
         </Routes>
