@@ -1,7 +1,7 @@
 import s from "./Feed.module.css";
 
 import Post from "./Post/Post.jsx";
-import TextArea from "../../../../UI/Input/Input";
+import TextArea from "../../../../UI/Textarea/Textarea";
 
 const Feed = () => {
   return (

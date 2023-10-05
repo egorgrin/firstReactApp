@@ -1,6 +1,6 @@
 import s from './UserSelector.module.css';
 import {NavLink} from 'react-router-dom';
-import ava from '../../../assets/img/ava.png';
+import ava from '../../../../../assets/img/ava.png';
 import {logDOM} from '@testing-library/react';
 
 const UserSelector = ({user}) => {

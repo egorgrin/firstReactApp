@@ -1,6 +1,6 @@
 import s from './Chat.module.css';
 import cover from '../../../../../assets/img/chatBg.svg';
-import InputContainer from '../../../../UI/Input/InputContainer';
+import TextareaContainer from '../../../../UI/Textarea/TextareaContainer';
 import Message from './Message/Message';
 import {useParams} from 'react-router-dom';
 import {useEffect, useRef, useState} from 'react';
@@ -41,7 +41,7 @@ const Chat = ({ friends }) => {
           {messages}
         </div>
         <div className={`${s.chat_input}`}>
-          <InputContainer />
+          <TextareaContainer />
         </div>
       </div>
   );

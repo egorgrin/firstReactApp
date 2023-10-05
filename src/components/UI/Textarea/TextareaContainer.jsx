@@ -1,7 +1,7 @@
 import React from 'react';
 // import {useState} from 'react';
-import {updateInputAC} from '../../../redux/reducers/input';
-import Input from './Input';
+import {updateInputValue} from '../../../redux/reducers/input';
+import Textarea from './Textarea';
 import {connect} from 'react-redux';
 
 const OldInputContainer = ({dispatch, actionCreator, userInput, recipientId}) => {
@@ -19,16 +19,16 @@ const OldInputContainer = ({dispatch, actionCreator, userInput, recipientId}) =>
     // }
     /*--------------------------*/
 
-    dispatch(updateInputAC(event.target.value));
+    dispatch(updateInputValue(event.target.value));
   };
 
   const send = () => {
-    dispatch(updateInputAC(``));
+    dispatch(updateInputValue(``));
     // setHeight(50);
   };
 
   return (
-      <Input
+      <Textarea
           // recipientId={recipientId}
       />
 
@@ -44,15 +44,15 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     send: () => {
-      dispatch(updateInputAC(``));
+      dispatch(updateInputValue(``));
     },
 
     handleChange: (event) => {
-      dispatch(updateInputAC(event.target.value));
+      dispatch(updateInputValue(event.target.value));
     },
   };
 };
 
-const InputContainer = connect(mapStateToProps, mapDispatchToProps)(Input);
+const TextareaContainer = connect(mapStateToProps, mapDispatchToProps)(Textarea);
 
-export default InputContainer;
+export default TextareaContainer;

@@ -2,15 +2,17 @@ import s from "./Nav.module.css";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faEnvelope, faUser, faNewspaper, faMusic, faUserGroup, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import {useSelector} from 'react-redux';
 
 const Nav = () => {
+  let admin = `profile/${useSelector((state) => state.auth.id)}`
   return (
     <aside className={s.wrapper}>
       <nav>
         <li>
           <NavLink
             className={(navData) => (navData.isActive ? `${s.active}` : "")}
-            to="/profile"
+            to={admin}
           >
             <div className={s.item}>
               <div className={s.icon}>

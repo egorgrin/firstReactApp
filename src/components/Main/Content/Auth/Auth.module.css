@@ -28,6 +28,7 @@ h2 {
 .fields {
   max-width: 600px;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .field_block:not(:last-of-type) {
@@ -38,9 +39,10 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.input {
+.field_block input {
   height: 2rem;
   padding: 0 .5rem;
+  background-color: var(--blue-white);
 }
 
 .checkbox {
@@ -54,6 +56,11 @@ h2 {
 .send {
   padding: 1rem;
   font-size: 20px;
-  background-color: var(--section-bg);
-  color: #8E8E8E;
+  color: var(--blue-white);
+  font-weight: bold;
+  background-color: var(--blue-hover);
+}
+
+.send:hover:not(nav a.active), .send:focus:not(nav a.active) {
+  background-color: var(--tg-blue);
 }

@@ -7,6 +7,32 @@
     align-items: center;
 }
 
+.logo_container, .login_container {
+    flex-basis: 15%;
+}
+
+.login_container {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+.login_item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login_icon {
+    margin-bottom: var(--module-gap);
+    font-size: 20px;
+}
+
+.login_item span {
+    font-size: .8rem;
+}
+
 .logo_container {
     position: relative;
     height: 100%;
@@ -46,9 +72,9 @@
 }
 
 .title {
-    justify-content: center;
     display: flex;
     flex-grow: 1;
+    justify-content: center;
 }
 
 /*.title h1 {*/

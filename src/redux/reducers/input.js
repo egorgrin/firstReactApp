@@ -1,21 +1,21 @@
-const UPDATE_INPUT = `update-content`;
+const UPDATE_INPUT_VALUE = `UPDATE_INPUT_VALUE`;
 
-let initialState = ``;
-
-const input = (state = initialState, action) => {
+const input = (state = {}, action) => {
   switch (action.type) {
-    case UPDATE_INPUT:
-      // console.log(action.prompt);
-      state = action.prompt;
-      return state;
+    case UPDATE_INPUT_VALUE:
+      return {
+        ...state,
+        [action.inputName]: action.value,
+      };
     default:
       return state;
   }
 };
 
-export const updateInputAC = (prompt) => ({
-  type: UPDATE_INPUT,
-  prompt,
+export const updateInputValue = (inputName, value) => ({
+  type: UPDATE_INPUT_VALUE,
+  inputName,
+  value,
 });
 
 export default input;

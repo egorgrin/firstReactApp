@@ -1,28 +1,5 @@
-textarea {
-  font-size: 14px;
-  resize: none;
-  height: 50px;
-}
-.input, .input textarea, .attachment, .send {
+.input, .attachment, .send {
   background-color: var(--section-bg);
-}
-
-.input {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-textarea {
-  width: 100%;
-  color: var(--blue-white);
-  padding: 1rem 2rem;
-}
-
-textarea::placeholder {
-  color: var(--blue-white);
-  font-size: 14px;
 }
 
 .attachment, .send {

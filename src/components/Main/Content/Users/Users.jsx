@@ -1,12 +1,13 @@
 import s from './Users.module.css';
-import UserSelector from '../../../UI/UserSelector/UserSelector';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {useEffect} from 'react';
 import {getFriends, getUsers} from '../../../../redux/actions/users';
 import {useLocation, useParams} from 'react-router-dom';
+import UserSelector from './UserSelector/UserSelector';
 
-const Users = ({users, currentUser}) => {
+const Users = ({currentUser}) => {
   const dispatch = useDispatch();
+  const users = useSelector((state) => state.users)
 
   let url = useLocation().pathname;
 

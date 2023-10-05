@@ -1,30 +1,25 @@
 import React, {useState} from 'react';
 import s from './Input.module.css';
 
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faPaperclip, faPaperPlane} from '@fortawesome/free-solid-svg-icons';
+import {updateInput, updateInputValue} from '../../../redux/reducers/input';
+import {useDispatch, useSelector} from 'react-redux';
 
-const Input = ({ userInput, send, handleChange }) => {
+const Input = ({inputName, placeholder}) => {
+  const dispatch = useDispatch();
+  const inputValue = useSelector((state) => state.input[inputName] || '');
 
-  let textareaRef = React.createRef();
+  const handleChange = (e) => {
+    dispatch(updateInputValue(inputName, e.target.value));
+  };
 
   return (
-      <div className={`${s.input}`}>
-        <button className={s.attachment}>
-          <FontAwesomeIcon icon={faPaperclip}/>
-        </button>
-        <textarea
-            // style={{height: height}}
-            ref={textareaRef}
-            onChange={handleChange}
-            placeholder="Type your message..."
-            value={userInput}
-        />
-        <button className={s.send} onClick={send}>
-          <FontAwesomeIcon icon={faPaperPlane}/>
-        </button>
-      </div>
+      <input
+          onChange={handleChange}
+          placeholder={placeholder}
+          className={`${s.input}`}
+          value={inputValue}
+      />
   );
-}
+};
 
 export default Input;

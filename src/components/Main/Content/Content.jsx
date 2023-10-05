@@ -2,10 +2,10 @@ import s from './Content.module.css';
 
 import {Route, Routes} from 'react-router-dom';
 import MessagesContainer from './Messages/MessagesContainer';
-import UsersContainer from './Users/UsersContainer';
-import UsersConstructor from './UserConstructor/UserContructor';
+import UsersConstructor from './Auth/Auth';
 import ProfileContainer from './Profile/ProfileContainer';
-import FriendsContainer from './Users/Friends/FriendsContainer';
+import Users from './Users/Users';
+import Auth from './Auth/Auth';
 
 const Content = () => {
   return (
@@ -26,13 +26,19 @@ const Content = () => {
           <Route
               path="/friends/*"
               element={
-                <FriendsContainer />
+                <Users />
               }
           />
           <Route
               path="/users/*"
               element={
-                <UsersContainer />
+                <Users />
+              }
+          />
+          <Route
+              path="/auth/*"
+              element={
+                <Auth />
               }
           />
         </Routes>
