@@ -15,19 +15,19 @@ const Users = ({currentUser}) => {
     case '/users': {
       useEffect(() => {
         dispatch(getUsers());
-      }, [dispatch]);
+      }, []);
       break
     }
     case '/friends': {
       useEffect(() => {
         dispatch(getUsers());
-      }, [dispatch]);
+      }, []);
       break
     }
     default: {
       useEffect(() => {
         dispatch(getUsers());
-      }, [dispatch]);
+      }, []);
       break
     }
   }

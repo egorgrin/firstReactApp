@@ -1,29 +1,31 @@
 import React, {useEffect, useState} from 'react';
 import s from './Auth.module.css';
 import {useDispatch, useSelector} from 'react-redux';
-import {auth} from '../../../../redux/actions/auth';
-import Input from '../../../UI/Input/Input';
+import {auth} from '../../redux/actions/auth';
+import Input from '../UI/Input/Input';
 
 
 const Auth = () => {
   const username = useSelector((state) => state.input.username);
   const password = useSelector((state) => state.input.password);
+  const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(auth(username, password));
+    await dispatch(auth(username, password)).then((token) => {
+      localStorage.setItem('token', token);
+    });
   };
 
   return (
       <div className={s.wrapper}>
         <form
             className={s.form}
-            autoComplete="off"
-            noValidate={true}
+            autoComplete="on"
             onSubmit={handleSubmit}
         >
-          <h2>Please log in</h2>
+          <h2>Please sign in</h2>
 
           <div className={s.fields}>
             <div className={s.field_block}>

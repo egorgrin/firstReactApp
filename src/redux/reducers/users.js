@@ -1,13 +1,15 @@
-let FETCH_USERS = 'FETCH_USERS'
-let CREATE_USER = 'CREATE_USER'
+let SET_USERS = 'SET_USERS'
 
 export default (users = [], action) => {
   switch (action.type) {
-    case FETCH_USERS:
-      return action.payload;
-    case CREATE_USER:
-      return [...users, action.payload];
+    case SET_USERS:
+      return action.users;
     default:
       return users;
   }
 };
+
+export const setUsers = (users) => ({
+  type: SET_USERS,
+  users: users,
+});

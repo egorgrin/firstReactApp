@@ -3,7 +3,7 @@ import ava from '../../../../assets/img/ava.png';
 import Feed from './Feed/Feed.jsx';
 
 const Profile = ({user, friends, users}) => {
-   return (
+  return (
       <div className={s.wrapper_container}>
         <div className={s.wrapper}>
           <div className={s.aside}>

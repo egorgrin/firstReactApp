@@ -2,10 +2,9 @@ import s from './Content.module.css';
 
 import {Route, Routes} from 'react-router-dom';
 import MessagesContainer from './Messages/MessagesContainer';
-import UsersConstructor from './Auth/Auth';
 import ProfileContainer from './Profile/ProfileContainer';
 import Users from './Users/Users';
-import Auth from './Auth/Auth';
+import Auth from '../../Auth/Auth';
 
 const Content = () => {
   return (

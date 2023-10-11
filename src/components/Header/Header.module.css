@@ -12,16 +12,31 @@
 }
 
 .login_container {
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     font-weight: bold;
+    align-items: center;
 }
 
 .login_item {
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+
+.ava_container {
+    max-width: 30px;
+    max-height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: var(--module-gap);
+}
+
+.login_item img {
+    max-width: 100%;
 }
 
 .login_icon {

@@ -1,6 +1,6 @@
 const UPDATE_INPUT_VALUE = `UPDATE_INPUT_VALUE`;
 
-const input = (state = {}, action) => {
+const input = (state = {username: 'EgorGrin', password: '0000'}, action) => {
   switch (action.type) {
     case UPDATE_INPUT_VALUE:
       return {

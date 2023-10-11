@@ -1,17 +1,23 @@
 import axios from 'axios';
 
-export const auth = (username, password) => axios.put(`http://localhost:5000/auth?username=${username}&password=${password}`);
+const API_URL = 'http://localhost:5000/';
 
-export const fetchUsers = () => axios.get('http://localhost:5000/users');
+const $api = axios.create({
+  withCredentials: true,
+  baseURL: API_URL,
+});
 
-export const fetchFriends = () => axios.get('http://localhost:5000/friends');
+$api.interceptors.request.use((config) => {
+  config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
+  return config;
+});
 
-/*
-export const createUser = (newUser) => {
-  axios.post(url, newUser)
-      .then((response) => {
-        console.log('Пользователь успешно создан:', response.data);
-      }).catch((error) => {
-    console.error('Произошла ошибка при создании пользователя:', error);
-  });
-};*/
+export const auth = (username, password) => $api.post(`auth`, {username: username, password: password});
+
+export const checkAuth = () => $api.get(`auth/check`);
+
+export const fetchUsers = () => $api.get(`users`);
+
+export const fetchUser = () => $api.get(`users`);
+
+export const fetchFriends = () => $api.get(`friends`);

@@ -18,7 +18,7 @@ const UserSelector = ({user}) => {
           <div className={s.data_top_row}>
             <NavLink to={`/profile/${user.id}`}>
               <div className={s.user_name}>
-                {user.firstName ? user.firstName : 'Name'}
+                {user.firstname ? user.firstname : 'Name'}
               </div>
             </NavLink>
             {isFriend
