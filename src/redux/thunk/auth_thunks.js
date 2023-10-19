@@ -1,10 +1,10 @@
-import * as api from '../../api';
-import {authUser} from '../reducers/user';
+import {authAPI} from '../../api/api';
+import {authUser} from '../reducers/auth_reducer';
 
 export const auth = (username, password) => async (dispatch) => {
   try {
-    const res = await api.auth(username, password);
-    console.log(res.data);
+    const res = await authAPI.auth(username, password);
+    // console.log(res.data);
     dispatch(authUser(res.data.user));
     return res.data.token;
   } catch (error) {
@@ -12,9 +12,9 @@ export const auth = (username, password) => async (dispatch) => {
   }
 };
 
-export const checkUser = () => async (dispatch) => {
+export const checkAuth = () => async (dispatch) => {
   try {
-    const res = await api.checkAuth();
+    const res = await authAPI.checkAuth();
     dispatch(authUser(res.data.user));
   } catch (error) {
     console.log(error.response.data.message);

@@ -1,4 +1,4 @@
-const ADD_MESSAGE = `add-message`;
+const ADD_MESSAGE = `ADD_MESSAGE`;
 
 let initialState = [
   {
@@ -146,13 +146,7 @@ let initialState = [
 
 ];
 
-export const addMessageAC = (userInput, recipientId) => ({
-  type: ADD_MESSAGE,
-  userInput,
-  recipientId,
-});
-
-const friends = (state = initialState, action) => {
+const friends_reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_MESSAGE:
       let recipient = state.find(friend => friend.id === action.recipientId);
@@ -168,4 +162,10 @@ const friends = (state = initialState, action) => {
   }
 };
 
-export default friends;
+export const addMessage = (userInput, recipientId) => ({
+  type: ADD_MESSAGE,
+  userInput,
+  recipientId,
+});
+
+export default friends_reducer;

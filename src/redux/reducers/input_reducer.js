@@ -1,6 +1,6 @@
 const UPDATE_INPUT_VALUE = `UPDATE_INPUT_VALUE`;
 
-const input = (state = {username: 'EgorGrin', password: '0000'}, action) => {
+const input_reducer = (state = {username: 'EgorGrin', password: '0000'}, action) => {
   switch (action.type) {
     case UPDATE_INPUT_VALUE:
       return {
@@ -18,4 +18,4 @@ export const updateInputValue = (inputName, value) => ({
   value,
 });
 
-export default input;
+export default input_reducer;

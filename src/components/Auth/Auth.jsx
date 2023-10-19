@@ -1,21 +1,23 @@
 import React, {useEffect, useState} from 'react';
 import s from './Auth.module.css';
 import {useDispatch, useSelector} from 'react-redux';
-import {auth} from '../../redux/actions/auth';
 import Input from '../UI/Input/Input';
+import * as auth_thunks from '../../redux/thunk/auth_thunks';
 
 
 const Auth = () => {
+  const dispatch = useDispatch();
+
   const username = useSelector((state) => state.input.username);
   const password = useSelector((state) => state.input.password);
-  const user = useSelector((state) => state.user);
-  const dispatch = useDispatch();
+
+  let user = useSelector((state) => state.auth.data);
+  // console.log(user);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await dispatch(auth(username, password)).then((token) => {
-      localStorage.setItem('token', token);
-    });
+    const token = await dispatch(auth_thunks.auth(username, password));
+    localStorage.setItem('token', token);
   };
 
   return (

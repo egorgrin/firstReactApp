@@ -14,14 +14,14 @@ import {useSelector} from 'react-redux';
 
 
 const Nav = () => {
-  // let adminId = `${useSelector((state) => state.admin.id)}`;
+  let user = useSelector((state) => state.auth.data);
   return (
       <aside className={s.wrapper}>
         <nav>
           <li>
             <NavLink
                 className={(navData) => (navData.isActive ? `${s.active}` : '')}
-                to={`profile/`}
+                to={`profile/${user.id}`}
             >
               <div className={s.item}>
                 <div className={s.icon}>

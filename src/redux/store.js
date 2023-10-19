@@ -2,17 +2,17 @@ import {combineReducers, legacy_createStore as createStore, applyMiddleware, com
 import thunk from 'redux-thunk';
 
 // Reducers
-import friends from './reducers/friends';
-import users from './reducers/users';
-import user from './reducers/user';
-import input from './reducers/input';
+import friends from './reducers/friends_reducer';
+import users from './reducers/users_reducer';
+import auth from './reducers/auth_reducer';
+import input from './reducers/input_reducer';
 
 let reducers = combineReducers(
     {
       friends,
       input,
       users,
-      user,
+      auth,
     });
 
 let store = createStore(reducers, compose(applyMiddleware(thunk)));

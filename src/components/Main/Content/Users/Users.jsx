@@ -1,11 +1,11 @@
 import s from './Users.module.css';
+import * as users_thunks from '../../../../redux/thunk/users_thunks';
 import {useDispatch, useSelector} from 'react-redux';
 import {useEffect} from 'react';
-import {getFriends, getUsers} from '../../../../redux/actions/users';
 import {useLocation, useParams} from 'react-router-dom';
 import UserSelector from './UserSelector/UserSelector';
 
-const Users = ({currentUser}) => {
+const Users = () => {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.users)
 
@@ -14,19 +14,19 @@ const Users = ({currentUser}) => {
   switch (url) {
     case '/users': {
       useEffect(() => {
-        dispatch(getUsers());
+        dispatch(users_thunks.getUsers());
       }, []);
       break
     }
     case '/friends': {
       useEffect(() => {
-        dispatch(getUsers());
+        dispatch(users_thunks.getUsers());
       }, []);
       break
     }
     default: {
       useEffect(() => {
-        dispatch(getUsers());
+        dispatch(users_thunks.getUsers());
       }, []);
       break
     }

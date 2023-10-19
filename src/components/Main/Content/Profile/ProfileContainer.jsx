@@ -13,7 +13,7 @@ class ProfileContainer extends React.Component {
 const mapStateToProps = (state) => {
   return {
     users: state.users,
-    user: state.user,
+    auth: state.auth.data,
     friends: state.friends,
   };
 };

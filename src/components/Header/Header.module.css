@@ -1,10 +1,13 @@
 .wrapper {
     background-color: var(--section-bg);
     margin-bottom: var(--module-gap);
-    padding: .5rem 1rem;
     height: 100px;
     display: flex;
     align-items: center;
+}
+
+.logo_container {
+    margin-left: 1rem;
 }
 
 .logo_container, .login_container {
@@ -20,16 +23,22 @@
 }
 
 .login_item {
-    cursor: pointer;
+    min-width: 100px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.login_item:hover {
+    background-color: var(--blue-hover);
 }
 
 .ava_container {
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 40px;
+    max-height: 40px;
     overflow: hidden;
     border-radius: 50%;
     margin-bottom: var(--module-gap);

@@ -2,7 +2,7 @@ import s from './Profile.module.css';
 import ava from '../../../../assets/img/ava.png';
 import Feed from './Feed/Feed.jsx';
 
-const Profile = ({user, friends, users}) => {
+const Profile = ({auth, friends}) => {
   return (
       <div className={s.wrapper_container}>
         <div className={s.wrapper}>
@@ -28,14 +28,16 @@ const Profile = ({user, friends, users}) => {
             <div className={s.data}>
               <img className={s.avatar_mobile} src={ava} alt=""/>
               <div className={`${s.text_data} ${s.text_data_left}`}>
+
                 <p>Name:</p>
-                {user.dob && <p>Date of Birth:</p>}
-                {user.country && <p>Country:</p>}
+                {auth.dob && <p>Date of Birth:</p>}
+                {auth.country && <p>Country:</p>}
+
               </div>
               <div className={`${s.text_data} ${s.text_data_right}`}>
-                <p>{user.firstName} {user.lastName}</p>
-                {user.dob && <p>{user.dob}</p>}
-                {user.country && <p>{user.country}</p>}
+                {<p>{`${auth.firstname} ${auth.lastname}`}</p>}
+                {auth.dob && <p>{auth.dob}</p>}
+                {auth.country && <p>{auth.country}</p>}
               </div>
 
               <div className={`${s.friends} ${s.stats_item}`}>

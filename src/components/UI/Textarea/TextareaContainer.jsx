@@ -1,6 +1,6 @@
 import React from 'react';
 // import {useState} from 'react';
-import {updateInputValue} from '../../../redux/reducers/input';
+import {updateInputValue} from '../../../redux/reducers/input_reducer';
 import Textarea from './Textarea';
 import {connect} from 'react-redux';
 

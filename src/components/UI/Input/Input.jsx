@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import s from './Input.module.css';
 
-import {updateInput, updateInputValue} from '../../../redux/reducers/input';
+import {updateInput, updateInputValue} from '../../../redux/reducers/input_reducer';
 import {useDispatch, useSelector} from 'react-redux';
 
 const Input = ({inputName, placeholder}) => {
