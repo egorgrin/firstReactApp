@@ -3,16 +3,19 @@ const SET_USER = 'SET_USER';
 const SIGN_OUT = 'SIGN_OUT';
 
 const initialStale = {
-  data: {},
-  isAuth: false
-}
+  data: {
+    id: null,
+    username: null,
+  },
+  isAuth: false,
+};
 
 const auth_reducer = (state = initialStale, action) => {
   switch (action.type) {
     case AUTH_USER: {
       let newState = {
-        data:{...state.data, ...action.data},
-        isAuth: true
+        data: {...state.data, ...action.data},
+        isAuth: true,
       };
       // console.log(newState);
       return newState;
@@ -22,8 +25,8 @@ const auth_reducer = (state = initialStale, action) => {
     }
     case SIGN_OUT: {
       return {
-        data:{},
-        isAuth: false
+        data: {},
+        isAuth: false,
       };
     }
     default:
@@ -34,7 +37,7 @@ const auth_reducer = (state = initialStale, action) => {
 export const authUser = (data) => ({
   type: AUTH_USER,
   data: data,
-})
+});
 export const setUser = (data) => ({
   type: SET_USER,
   data: data,

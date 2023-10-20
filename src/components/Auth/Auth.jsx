@@ -11,8 +11,8 @@ const Auth = () => {
   const username = useSelector((state) => state.input.username);
   const password = useSelector((state) => state.input.password);
 
-  let user = useSelector((state) => state.auth.data);
-  // console.log(user);
+  /*let user = useSelector((state) => state.auth.data);
+  console.log(user);*/
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ const Auth = () => {
       <div className={s.wrapper}>
         <form
             className={s.form}
-            autoComplete="on"
+            // autoComplete="on"
             onSubmit={handleSubmit}
         >
           <h2>Please sign in</h2>

@@ -1,13 +1,12 @@
 import React from 'react';
-import withRouter from '../../../../api/WithRouter';
+import {withRouterHOC} from '../../../../api/WithRouterHOC';
 import {connect} from 'react-redux';
 
 import Profile from './Profile';
+import {compose} from 'redux';
 
 class ProfileContainer extends React.Component {
-  render() {
-    return <Profile {...this.props} />;
-  }
+  render = () => <Profile {...this.props} />;
 }
 
 const mapStateToProps = (state) => {
@@ -18,4 +17,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(withRouter(ProfileContainer));
+export default compose(
+    connect(mapStateToProps),
+    withRouterHOC,
+)(ProfileContainer);
+
+// export default connect(mapStateToProps)(withRouterHOC(ProfileContainer));

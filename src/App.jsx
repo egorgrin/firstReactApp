@@ -14,7 +14,6 @@ const App = () => {
   const dispatch = useDispatch();
   let auth = useSelector((state) => state.auth.data);
   let isAuth = useSelector((state) => state.auth.isAuth);
-  // console.log(user.id);
 
   useEffect(() => {
     if (localStorage.getItem('token')) {

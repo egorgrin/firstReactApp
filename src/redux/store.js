@@ -15,6 +15,9 @@ let reducers = combineReducers(
       auth,
     });
 
-let store = createStore(reducers, compose(applyMiddleware(thunk)));
+let store = createStore(reducers,
+    compose(
+    applyMiddleware(thunk)
+));
 
 export default store;
